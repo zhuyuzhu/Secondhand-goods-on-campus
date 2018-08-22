@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/shouye/shouye",
     "pages/shoppingCart/shoppingCart",
+    "pages/shouye/shouye",
+    
     "pages/my/my",
     "pages/logs/logs",
     "pages/index/index",

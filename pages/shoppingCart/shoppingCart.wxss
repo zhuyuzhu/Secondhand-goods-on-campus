@@ -1,5 +1,27 @@
 /* pages/shoppingCart/shoppingCart.wxss */
+.wrapper {
+  position: fixed;
+  top: 0rpx;
+  display: flex;
+  width: 100%;
+  height: 50rpx;
+  justify-content: space-around;
+  background-color: #fff;
+}
+.select {
+ 
+  text-align: center;
+  width: 50%;
+  background-color: blue;
+  color: #fff;
+}
+.noSelect {
+  width: 50%;
+  text-align: center;
+  background-color: green;
+}
 .cart-box {
+   margin-top: 50rpx;
   margin-bottom: 100rpx;
 }
 .cart-goods {

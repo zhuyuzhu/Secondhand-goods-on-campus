@@ -1,10 +1,10 @@
 <!--pages/shoppingCart/shoppingCart.wxml-->
 <view class='box'>
-  <!-- <view class='wrapper'>
-    <view class="tab-content {{myBookCart ? 'select' : 'noSelect'}} " bindtap='chooseBookCart'>书本</view>
-    <view class="tab-content {{myThingCart ? 'select' : 'noSelect'}}" bindtap='chooseThingCart'>物品</view>
+  <view class='wrapper'>
+    <view class="tab-content select  " bindtap='chooseBookCart'>书本</view>
+    <view class="tab-content noSelect" bindtap='chooseThingCart'>物品</view>
 
-  </view> -->
+  </view>
 </view>
 <view class="cart-box">
   <!-- wx:for 渲染购物车列表 -->
