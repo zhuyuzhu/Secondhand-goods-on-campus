@@ -1,0 +1,22 @@
+<!--pages/release/release.wxml-->
+
+  <view class='search-list'>
+    <block wx:for="{{resultList}}" wx:key="{{resultList}}">
+    <view class='movie-wrapper' data-id='{{item.bookid}}' bindtap='toBookDetail'>
+      <view class='movie-content'>
+        <image class='poster' src='{{item.picture}}'></image>
+        <view class='total'>
+            <text class='name'>{{item.bname}}</text>
+            <text class='desc'>作者：{{item.author}}</text>
+            <text class='desc'>出版社：{{item.press}}</text>
+            <text class='desc'>校区：{{item.college}}</text>
+            <text class='desc'>成色：{{item.bstatus}}</text>
+            <text class='price'>￥{{item.bprice}}</text>
+        </view>
+      </view>
+    </view>
+    
+    </block>
+<view class='bottom' wx:if="{{isBookSearchShow}}" wx:key="{{isBookSearchShow}}">没有啦</view>
+  </view>
+

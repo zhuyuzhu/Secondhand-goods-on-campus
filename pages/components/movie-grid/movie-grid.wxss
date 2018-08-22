@@ -1,0 +1,28 @@
+/* pages/movie-grid/movie-grid.wxss */
+.movie-wrapper {
+  display: inline-block;
+  margin: 0 10rpx;
+}
+.movie-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* 图片的类poster */
+.poster {
+  width: 185rpx;
+  height: 220rpx;
+}
+.name {
+  width: 200rpx;
+  color: #4a4a4a;
+  font-weight: 500;
+  font-size: 28rpx;
+  text-align: center;
+  white-space: ellipsis;
+  overflow: hidden;
+}
+.wish-count {
+  color: #f40;
+  font-size: 36rpx;
+}

@@ -1,0 +1,22 @@
+<!--pages/classify/job/job.wxml-->
+
+<view class='job-wrapper'>
+  <view class='job-tip'>温馨提示：平台兼职信息为本校学生所发，信息真实性请与发布者核实后报名，凡收取费用的兼职请谨慎报名，以防被骗</view>
+  
+  <view class='job-school'>湖北科技学院学生兼职</view>
+  <scroll-view scroll-y class='scroll-job' bindscrolltolower="loadMore">
+    <block wx:for="{{jobMessage.messages}}" wx:key="{{jobMessage.messages}}">
+      <view class='job-box' bindtap='toDetail' data-id='{{item.jobid}}'>
+        <view class='job-top'>
+          <text class="job-title">{{item.title}}</text>
+          <text class="job-jianzhi">兼职</text>
+        </view>
+        <text class='job-place'>{{item.workplace}}</text>
+        <text class='job-time'>{{item.worktime}}</text>
+        <text class='job-require'>{{item.workrequirement}}</text>
+          <text class='job-treat'>{{item.workpay}}</text>  
+      </view>
+    </block>
+    <view wx:if="{{isJobShow}}" class='bottom'>到底了，没有了</view>
+  </scroll-view>
+</view>

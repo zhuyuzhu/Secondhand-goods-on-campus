@@ -1,0 +1,18 @@
+<!--pages/components/weatherLocationTrand/weatherLocationTrand.wxml-->
+<template name="search">
+  <view class="place_info">
+    <!-- 此处URL是以调用者的位置来找文件的 -->
+    <!-- 链接的位置太远，也是没有效果的，既不报错，也没有跳转，比如：../../mapWeather/search/search -->
+    <navigator url="../search/search" class='location'>
+      <view class='school'>
+        <text>{{search.schoolPlace || search.placeData.title}}</text>
+      </view>
+      <canvas canvas-id="myCanvas" class='myCanvas' />
+    </navigator>
+   
+  </view>
+  <!-- <view class="map_container">
+  <map class="map" id="map" longitude="{{search.longitude}}" latitude="{{search.latitude}}" scale="14" show-location="true" markers="{{search.markers}}" bindmarkertap="makertap"></map>
+</view> -->
+
+</template>

@@ -1,0 +1,20 @@
+<!--pages/search-thing-result/search-thing-result.wxml-->
+  <view class='search-list'>
+    <block wx:for="{{resultList}}" wx:key="{{resultList}}">
+    <view class='movie-wrapper' data-id='{{item.goodid}}' bindtap='toThingDetail'>
+      <view class='movie-content'>
+        <image class='poster' src='{{item.gpicture}}'></image>
+        <view class='total'>
+            <text class='name'>{{item.gname}}</text>
+            <text class='desc'>校区：{{item.gcollege}}</text>
+            <text class='desc'>成色：{{item.gstatus}}</text>
+            <text class='price'>￥{{item.bprice}}</text>
+        </view>
+      </view>
+    </view>
+    
+    </block>
+<view class='bottom' wx:if="{{isThingSearchShow}}" wx:key="{{isThingSearchShow}}">没有啦</view>
+  </view>
+
+

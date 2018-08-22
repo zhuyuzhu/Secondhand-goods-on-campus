@@ -1,0 +1,103 @@
+/* pages/shouye/shouye.wxss */
+@import '../components/news/news.wxss';
+@import '../components/weatherLocationTrand/weatherLocationTrand.wxss';
+@import '../components/recommend/recommend.wxss';
+.sousuo {
+  height: 120rpx;
+  width: 100%;
+}
+.sousuo image{
+  width: 100%;
+  height: 100%;
+}
+/* 首页的轮播图 */
+.swiper {
+  height: 400rpx;
+  width: 100%;
+}
+.swiper-image {
+  height: 100%;
+  width: 100%;
+}
+.slide-image{
+   height: 100%;
+  width: 100%;
+}
+/* 分类的类 */
+.fenlei {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 190rpx;
+  margin-top: 10rpx;
+  background-color: white;
+}
+.fenlei .navi {
+  flex-grow: 1;
+  width: 50rpx;/*此处无效，但是必须存在*/
+}
+.leibie {
+  margin-top: 18rpx;
+  width: 100%;
+  height: 70%;
+  text-align: center;
+}
+.leibie image {
+  margin: auto 0rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-top: 10rpx;
+}
+.leibie view{
+  font-size: 30rpx;
+  color: #666;
+  margin-top: -14rpx;
+}
+
+/* 今日推荐 */
+.tuijian-img {
+  position: absolute;
+  margin-top: 14rpx;
+  width: 100%;
+  height: 60rpx;
+  background: linear-gradient(to right, green , #3F7CC0  80%); 
+}
+.tuijian-img image{
+  position: absolute;
+  right: 0rpx;
+ width: 220rpx;
+  height: 60rpx;
+}
+.tuijian-cont {
+  position: absolute;
+  left: 10rpx;
+  top: 0rpx;
+  color: white;
+  font-weight: 600;
+}
+
+/* .book {
+  flex-grow: 1;
+  width: 50rpx;此处无效，但是必须存在
+  margin-top: 80rpx;
+  height: 200rpx;
+}
+*/
+/* 天气时间 */
+.weather {
+  position: absolute;
+  right: 0rpx;
+  top: 5rpx;
+  width: 500rpx;
+  height: 70rpx;
+  color: #3E97CC;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  
+}
+.weather text {
+  vertical-align:10rpx;
+}
+

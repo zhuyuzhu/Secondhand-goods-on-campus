@@ -1,0 +1,20 @@
+<!--pages/search-book/search-book.wxml-->
+<!--pages/release/release.wxml-->
+<!--pages/search/search.wxml-->
+<view class='search'>
+  <view class='search-book'>
+    <icon type='search' size='16' class='search-icon'></icon>
+    <input class='search-input' placeholder='书名搜索' bindinput='searchBook'></input>
+    <text class='search-search' data-keyWord='{{keyWord}}' bindtap='bindToSearch'>搜索</text>
+  </view>
+
+  <view class='search-list'>
+    <block wx:for="{{resultList}}" wx:key="result">
+    <view class='book-wrapper' >
+      <view class='book-content' data-value='{{item}}' bindtap='bindToSearchList'>{{item}}</view>
+    </view>
+    </block>
+
+  </view>
+</view>
+

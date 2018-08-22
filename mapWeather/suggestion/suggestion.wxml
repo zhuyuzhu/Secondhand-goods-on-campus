@@ -1,0 +1,6 @@
+<view class="section">
+  <input placeholder="输入关键字"  type="text" bindinput="bindKeyInput"/>
+</view>
+<view class="sug_info">
+  <text>{{sugData}}</text>
+</view>

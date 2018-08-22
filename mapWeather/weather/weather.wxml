@@ -1,0 +1,10 @@
+<view class="weather">
+  <!-- <image src='{{weatherUrl}}' style='width:40rpx;height:40rpx'></image> -->
+  <text>{{weatherData}}</text>
+ <view wx:for="{{weather_data}}" wx:key="{{weather_data}}" wx:for-index="index" wx:for-item="item">
+ <text>{{item.date}} : </text>
+ <image src='{{item.dayPictureUrl}}' style='width:40rpx;height:40rpx'></image>
+ <image src='{{item.nightPictureUrl}}' style='width:40rpx;height:40rpx'></image>
+ 
+</view> 
+</view>

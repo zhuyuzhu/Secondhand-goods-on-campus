@@ -1,0 +1,63 @@
+/* pages/classify/job/job.wxss */
+.job-wrapper {
+  background-color: #fff;
+}
+.job-tip{
+  padding: 10rpx 20rpx;
+  color: red;
+  font-size: 28rpx;
+  background-color: #e6e6e6;
+  
+}
+
+.job-school {
+  display: inline-block;
+padding: 30rpx 40rpx;
+color: #444;
+font-size: 36rpx;
+
+}
+.job-box {
+  display: flex;
+  flex-direction: column;
+  border-top-width: 1rpx;
+  border-top-style: solid;
+  border-top-color: #f3f3f3;
+  padding: 30rpx 40rpx;
+}
+.job-title {
+  font-weight: 400;
+  font-size: 36rpx;
+}
+.job-jianzhi {
+  display: inline-block;
+  background-color: #37A88D;
+  border-radius: 10rpx;
+  color: #fff;
+  padding: 5rpx 10rpx;
+  margin-left: 20rpx;
+  font-size: 32rpx;
+}
+.job-place {
+  color: #666;
+  font-size: 32rpx;
+}
+.job-time {
+  color: #666;
+  font-size: 32rpx;
+}
+
+.job-require {
+  color: #666;
+  font-size: 32rpx;
+}
+.job-treat {
+  font-size: 36rpx;
+  color: #f40;
+}
+.bottom {
+  font-size: 28rpx;
+  color: #e9e9e9;
+  text-align: center;
+  background-color: #666;
+}

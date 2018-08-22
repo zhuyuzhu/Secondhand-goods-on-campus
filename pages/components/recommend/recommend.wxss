@@ -1,0 +1,40 @@
+/* pages/components/recommend/recommend.wxss */
+@import '../movie-grid/movie-grid.wxss';
+.cont {
+  margin-top: 80rpx;
+}
+.session-page {
+  background-color: #fff;
+  border-width: 2rpx 0;
+  border-color: #e6e6e6;
+  border-style: solid;
+  padding-bottom: 10rpx;
+  margin-bottom: 10rpx;
+}
+.session-header {
+  padding: 10rpx 20rpx;
+  display: flex;
+  align-items: center;
+}
+.header-title {
+  color: #4a4a4a;
+  flex: 1;
+  font-weight: 400;
+  font-size: 36rpx;
+
+}
+.header-more {
+  color: #32cd32;
+
+}
+.session-content {
+  width: 100%;
+  white-space: nowrap;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  margin-top: 10rpx;
+}
+.movie-scroll {
+  white-space: nowrap;
+  width: 100%;
+}

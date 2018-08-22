@@ -1,0 +1,66 @@
+<!--pages/address/address.wxml-->
+<view class="hander">
+
+</view>
+<form bindsubmit="formSubmit">
+  <view class="form-list">
+    <!-- 用户姓名设置 -->
+    <view class="form-item">
+      <view class="form-item-lable">姓名:</view>
+      <view class="form-item-button">
+        <input type="text" value="{{address.name}}" name="name" />
+      </view>
+    </view>
+    <!-- 用户电话设置 -->
+    <view class="form-item">
+      <view class="form-item-lable">电话:</view>
+      <view class="form-item-button">
+        <input type="number" name="phone" value="{{address.phone}}" />
+      </view>
+    </view>
+
+    <view bindchange="bindChange" value="{{value}}">
+      <!-- 用户省份 -->
+      <view class="form-item">
+        <view class="form-item-lable">省份:</view>
+        <view class="form-item-button">
+          <picker bindchange='changeProvince' mode="selector" range="{{provinces}}" value="{{province}}">
+            <view>
+              <input type="text" name="province" value="{{province}}" placeholder='--请选择--' placeholder-style='color: #6699ff' disabled='true' /> </view>
+          </picker>
+        </view>
+      </view>
+      <!-- 用户城市 -->
+      <view class="form-item">
+        <view class="form-item-lable">城市:</view>
+        <view class="form-item-button">
+          <picker bindchange='changeCity' mode="selector" range="{{citys}}" value="{{citySelIndex}}">
+            <view>
+              <input type="text" placeholder='--请选择--' placeholder-style='color: #6699ff' class="hidden" name="city" value="{{city}}" disabled='true' />
+            </view>
+          </picker>
+        </view>
+      </view>
+      <!-- 用户区县 -->
+      <view class="form-item">
+        <view class="form-item-lable">区县:</view>
+        <view class="form-item-button">
+          <picker bindchange='changeDistrict' mode="selector" range="{{countys}}" value="{{districtSelIndex}}">
+            <view>
+              <input type="text" placeholder='--请选择--' placeholder-style='color: #6699ff' name="district" value="{{county}}" class="hidden" disabled='true' />
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+
+    <!-- 用户地址 -->
+    <view class="form-item">
+      <view class="form-item-lable">详细地址:</view>
+      <view class="form-item-button">
+        <input name="detail" value="{{address.detail}}" />
+      </view>
+    </view>
+    <button class="save-btn" form-type="submit" >保存</button>
+  </view>
+</form>

@@ -1,0 +1,56 @@
+/* pages/classify/jobDetail/jobDetail.wxss */
+.job-wrapper {
+  background-color: #F5F5F7;
+  margin-bottom: 100rpx;
+}
+.job-title {
+  border-top-width: 1rpx;
+  border-top-color: #F5F5F7;
+  border-top-style: solid;
+  padding: 30rpx 40rpx;
+  background-color: #fff;
+}
+.title {
+  display: inline-block;
+  font-size: 46rpx;
+  background-color: #fff;
+}
+.jiesuan {
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  color: #f40;
+  padding: 5rpx 10rpx;
+  background-color: #fff;
+}
+.jianzhi {
+  display: inline-block;
+  background-color: #37A88D;
+  border-radius: 10rpx;
+  color: #fff;
+  padding: 5rpx 10rpx;
+  margin-left: 40rpx;
+  font-size: 32rpx;
+ 
+}
+.job-school {
+  width: 100%;
+  height: 50rpx;
+  padding: 20rpx 40rpx;
+  border-top-width: 1rpx;
+  border-top-color: #F5F5F7;
+  border-top-style: solid;
+ background-color: #fff;
+ font-size: 32rpx;
+}
+.job-detail{
+  margin-top: 20rpx;
+}
+.job-detail view{
+  font-size: 30rpx;
+  color: #666;
+  padding: 20rpx 40rpx;
+   border-top-width: 1rpx;
+  border-top-color: #F5F5F7;
+  border-top-style: solid;
+  background-color: #fff;
+}

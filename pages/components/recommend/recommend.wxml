@@ -1,0 +1,37 @@
+<!--pages/components/recommend/recommend.wxml-->
+<import src="../movie-grid/movie-grid.wxml"/>
+<template name= "recommend">
+<view class='cont'>
+  <view class='session-page'>
+    <view class='session-header'>
+      <text class='header-title'>推荐好书</text>
+      <text class='header-more' bindtap='bindToMore' data-type-id='inThearters'>更多></text>
+    </view>
+    <view class='session-content'>
+      <scroll-view scroll-x="ture" class='movie-scroll'>
+        <block wx:for="{{inThearters}}" wx:key="{{inThearters}}">
+          <template is="movie-grid" data="{{...item}}"></template>
+          <!-- 此处的item就是指inTheater，因为遍历每一项 -->
+        </block>
+      </scroll-view>
+
+    </view>
+  </view>
+  <view class='session-page'>
+    <view class='session-header'>
+      <text class='header-title'>推荐好物</text>
+
+      <text class='header-more' bindtap='bindToMore' data-type-id='comingSoon'>更多></text>
+    </view>
+    <view class='session-content'>
+      <scroll-view scroll-x="ture" class='movie-scroll'>
+        <block wx:for="{{comingSoon}}" wx:key="{{comingSoon}}">
+          <template is="movie-grid2" data="{{...item}}"></template>
+          <!-- 此处的item就是指inTheater，因为遍历每一项 -->
+        </block>
+      </scroll-view>
+
+    </view>
+  </view>
+</view>
+</template>

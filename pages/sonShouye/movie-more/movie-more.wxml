@@ -1,0 +1,37 @@
+<!--pages/movie-more/movie-more.wxml-->
+<import src="../movie-list/movie-list.wxml"></import>
+<view class='containter'>
+  <view class='session-tab'>
+    <text class="tab-name {{showInThearter ? 'tab-select' : 'tab-normal'}}" data-tab-id='inThearters' bindtap='selectTap'>推荐好书</text>
+    <text class="tab-name {{showComingSoon ? 'tab-select' : 'tab-normal'}}" data-tab-id='comingSoon' bindtap='selectTap'>推荐好物</text>
+  </view>
+  <view class='session-movie'>
+    <view class='session-content'>
+      <block wx:if="{{showInThearter}}">
+        <scroll-view scroll-y class='scroll-movie' bindscrolltolower="loadMore">
+          <block wx:for="{{inThearters.messages}}" wx:key="{{inThearters.messages}}">
+            <!-- 引入模板，并将遍历的值=传入,
+        注意：在该页声明引入的模板 -->
+            <template is="movie-list1" data="{{...item}}"></template> 
+            
+          </block>
+          <view wx:if="{{isBookShow}}" class='bottom'>到底了，没有了</view>
+        </scroll-view>
+         
+      </block>
+      <block wx:if="{{showComingSoon}}">
+        <scroll-view scroll-y class='scroll-movie' bindscrolltolower="loadMore">
+          <block wx:for="{{comingSoon.messages}}" wx:key="{{comingSoon.messages}}">
+            <!-- 引入模板，并将遍历的值=传入,
+        注意：在该页声明引入的模板 -->
+            <template is="movie-list2" data="{{...item}}"></template>
+          </block>
+          <view wx:if="{{isThingShow}}" class='bottom'>到底了，没有了</view>
+        </scroll-view>
+      </block>
+    
+    </view>
+    
+  </view>
+  
+</view>

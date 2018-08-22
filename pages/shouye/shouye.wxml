@@ -1,0 +1,73 @@
+<!--pages/shouye/shouye.wxml-->
+<import src="../components/news/news.wxml"></import>
+<import src="../components/weatherLocationTrand/weatherLocationTrand.wxml"></import>
+<import src="../components/recommend/recommend.wxml"></import>
+<!-- 最顶端的位置天气时间 -->
+<!-- 1.位置 -->
+<template is="search" data="{{search}}"></template>
+<!-- 2.天气 -->
+<navigator url='../weather/weather'>
+  <view class='weather'>
+    <text>| </text>
+    <image src='{{weatherUrl}}' style='width:40rpx;height:40rpx;margin-top:8rpx;'></image>
+    <text> {{weather_data[0].date}}</text>
+  </view>
+</navigator>
+
+
+<!-- 首页的轮播图 -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">
+    <swiper-item>
+
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 搜索框 -->
+<view class='sousuo' bindtap='bindSearchBook' >
+  <image src='/images/shouye/sousuo.png'></image>
+</view>
+<!-- 通知栏的模板 -->
+<view class='templateNews'>
+  <template is="theNews" data="{{msgList}}"></template>
+</view>
+<!-- 分类 -->
+<view class='fenlei'>
+  <navigator url='../classify/thing-search/thing-search' class='navi navi-zahuopu'>
+    <view class='leibie fenlei-zahuopu'>
+      <image src='../../images/fenlei/zahuopu.png'></image>
+      <view>校园百货</view>
+    </view>
+  </navigator>
+  <navigator url='../classify/job/job' class='navi navi-jianzhi'>
+    <view class='leibie fenlei-jianzhi'>
+      <image src='../../images/fenlei/jianzhi.png'></image>
+      <view>学生兼职</view>
+    </view>
+  </navigator>
+  <navigator url='../classify/sale/sale' class='navi navi-jishou'>
+    <view class='leibie fenlei-jishou'>
+      <image src='../../images/fenlei/jishou.png'></image>
+      <view>低价急售</view>
+    </view>
+  </navigator>
+  <navigator url='../classify/welfare/welfare' class='navi navi-gongyi'>
+    <view class='leibie fenlei-gongyi'>
+      <image src='../../images/fenlei/gongyi.png'></image>
+      <view>爱心公益</view>
+    </view>
+  </navigator>
+
+</view>
+<!-- 今日推荐 -->
+
+<!-- 推荐好书 -->
+<view class='tuijian-img'>
+  <text class='tuijian-cont'>今日推荐</text>
+  <image src='../../images/tuijian.png'></image>
+</view>
+ 
+ <template is="recommend" class="tuijian-temp" data="{{inThearters,comingSoon}}"/>
+
+

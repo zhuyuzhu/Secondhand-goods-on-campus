@@ -1,0 +1,25 @@
+<!--pages/thing-detail/thing-detail.wxml-->
+<view class='detail'>
+  <image src='{{detailData.thingImage}}' class='detail-image'>
+  </image>
+  <view class='detail-sale'>
+    <view class='detail-price'>￥{{detailData.thingPrice}}</view>
+    <image src='../movie-detail/1.png' class='detail-selling-price-img'></image>
+    <view class='detail-sell'>售价</view>
+  </view>
+  <view class='detail-cont'>
+    <view class='detail-title'>物品：{{detailData.thingName}}</view>
+    <view class='detail-poster'>发布者：{{detailData.poster}}</view>
+    <view class='detail-detail-box'>
+    <image class='detail-detail-image' src='../movie-detail/2.png'></image>
+    </view>
+    <view style='color: green'>校区：{{detailData.thingCampus}}</view>
+    <view style='color: green'>成色：{{detailData.thingConditions}}</view>
+    <view class='detail-detail'>产品详情：{{detailData.thingDescribe}}</view>
+  </view>
+  <view class='detail-bottom'>
+    <view class='addCart' bindtap='addMyCart'>加入购物车</view>
+    <view class='buyNow' bindtap='nowBuy'>立即购买</view>
+  </view>
+</view>
+

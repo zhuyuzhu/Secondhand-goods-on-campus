@@ -1,0 +1,82 @@
+/* pages/movie-detail/movie-detail.wxss */
+.detail {
+  margin-bottom: 200rpx;
+}
+.detail-cont {
+  color: #666;
+  margin-left: 10rpx;
+}
+.detail-image {
+  position: absolute;
+  left: 50%;
+  margin-left: -230rpx;
+  width: 460rpx;
+  height: 600rpx;
+  margin-top: -620rpx;
+}
+.detail-sale {
+  display: flex;
+  width: 100%;
+  height: 80rpx;
+  margin-top: 640rpx;
+}
+.detail-selling-price-img {
+  flex: 1;
+  height: 100%;
+  width: 80rpx;
+}
+.detail-price {
+  background-color: #D0011B;
+  flex: 5;
+  color: #FFD2BB;
+  text-align: center;
+  line-height: 80rpx;
+}
+.detail-title {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: red;
+}
+.detail-sell {
+  flex: 5;
+  background:linear-gradient(to right, #FEF841 , #FFC114);
+  color: #A8B527;
+  text-align: center;
+  line-height: 80rpx;
+}
+.detail-detail-box {
+  margin: 10rpx auto;
+  background-color: #F2F3F3;
+  width: 100%;
+  height: 80rpx;
+}
+.detail-detail-image {
+  position: absolute;
+  left: 50%;
+  margin-left: -200rpx;
+  width: 400rpx;
+  height: 80rpx;
+}
+
+.detail-bottom {
+  display: flex;
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+  height: 100rpx;
+
+}
+.addCart {
+  color: white;
+  text-align: center;
+  background-color: #F33C52;
+  flex: 1;
+  line-height: 100rpx;
+}
+.buyNow {
+  color: white;
+  text-align: center;
+  background-color: #D0011B;
+  flex: 1;
+  line-height: 100rpx;
+}

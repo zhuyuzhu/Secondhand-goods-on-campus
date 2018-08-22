@@ -1,0 +1,52 @@
+/* pages/release/release.wxss */
+
+.movie-wrapper {
+  padding: 0 30rpx;
+  border-bottom: 1px solid #e9e9e9;
+  box-sizing: border-box;
+}
+.movie-content {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  margin: 16rpx 0;
+}
+.movie-content .poster {
+  width: 220rpx;
+  height: 260rpx;
+}
+.total {
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.name {
+  font-weight: 600;
+  color: #4a4a4a;
+  font-size: 32rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.desc {
+  font-size: 30rpx;
+    color: #9e9e9e;
+    font-weight: 300;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.price {
+     font-size: 36rpx;
+    color: #f40;
+    font-weight: 300;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.bottom {
+   color: #666;
+  text-align: center;
+  font-size: 30rpx;
+}

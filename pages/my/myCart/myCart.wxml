@@ -1,0 +1,37 @@
+<!--pages/shoppingCart/shoppingCart.wxml-->
+<view class="cart-box">
+  <!-- wx:for 渲染购物车列表 -->
+  <view wx:for="{{carts}}" wx:key="{{carts}}" class='cart-goods'>
+
+    <!-- wx:if 是否选择显示不同图标 -->
+    <icon wx:if="{{item.selected}}" class='cart-icon' type="success" color="red" bindtap="selectList" data-index="{{index}}" />
+    <icon wx:else type="circle" class='cart-icon' bindtap="selectList" data-index="{{index}}" />
+
+    <!-- 点击商品图片可跳转到商品详情 -->
+    <navigator url="../details/details?id={{item.id}}" class='cart-img'>
+      <image class="cart-thumb" src="{{item.image}}"></image>
+
+      <view class='cart-message'>
+        <text class='name'>书名：{{item.title}}</text>
+        <text class='author'>作者：{{item.author}}</text>
+        <text class='press'>出版社：{{item.press}}</text>
+        <text class='price'>价格：￥{{0 || item.price}}</text>
+      </view>
+    </navigator>
+
+    <!-- 删除按钮 -->
+    <text bindtap="deleteList" data-index="{{index}}" class='delete'> × </text>
+  </view>
+</view>
+
+<!-- 底部操作栏 -->
+<view class='cart-bottom'>
+  <!-- wx:if 是否全选显示不同图标 -->
+  <icon wx:if="{{selectAllStatus}}" class='cart-iconAll' type="success_circle" color="red" bindtap="selectAll" />
+  <icon wx:else type="circle" class='cart-iconAll' color="#ff7100" bindtap="selectAll" />
+  <text class='cart-allSelect'>全选</text>
+  <!-- 总价 -->
+  <text class='cart-allPrice'>合计:</text>
+  <text class='allPrice'>￥{{totalPrice}}</text>
+  <button class='btn-red' bindtap='toBuy' form-type='submit'>去结算</button>
+</view>

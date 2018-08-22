@@ -1,0 +1,17 @@
+/* pages/components/news/news.wxss */
+.swiper_container {
+color: #E1B47C;
+ background-color: #F3F3F3;
+ height: 60rpx;
+ width: 100%;
+ 
+ line-height: 40rpx;
+}
+
+.swiper_item {
+text-indent: 1rem;
+ font-size: 30rpx;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ white-space: nowrap;
+}

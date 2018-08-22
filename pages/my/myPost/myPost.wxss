@@ -1,0 +1,61 @@
+/* pages/my/myPost/myPost.wxss */
+
+.add_layer{width:100%;height:100%;background:rgba(66, 69, 72, 0.74);position:fixed;left:0;top:0;}
+.add_layer input,.add_layer textarea,.add_layer button{width:80%;margin:0 auto;margin:15px auto;font-size:14px;padding:10rpx;}
+.add_layer input,.add_layer textarea{
+  background:#fff;
+}
+.diary_list{border-bottom:1px solid #ccc;margin:0px 0;padding:10px;position:relative;}
+.diary_list text{font-size:16px;color:#1e1e1e;}
+.diary_list view{font-size:14px;padding:5px 0}
+.diary_list button{
+  position:absolute;
+  right:15px;
+  top:12px;
+}
+.diary_list button.modify{right:90px;}
+
+
+.weui-media-box__info__operate{
+  float:right;
+  color:#1e1e1e;
+  padding-right:0em;
+
+}
+.weui-media-box__info__operate .del{
+  margin-right: 15px;
+}
+
+.weui-media-box{
+  padding-bottom: 0px;
+}
+
+
+.weui-cells__title{
+  text-align: left;
+}
+textarea,input{
+  text-align: left;
+  color:#1e1e1e;
+}
+.weui-cells {
+  border:1px solid #3891f8;
+}
+.weui-cells__title{
+  padding-left: 0px;
+  color:#1e1e1e;
+}
+.weui-dialog__ft button{
+  background: none;
+  padding: 0px;
+  margin: 0px;
+}
+form .weui-dialog__bd:first-child {
+  padding:0px 30rpx 1.7em;
+  
+}
+.page__ft{
+      padding-top: 40px;
+    padding-bottom: 10px;
+}
+

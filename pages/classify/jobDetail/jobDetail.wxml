@@ -1,0 +1,18 @@
+<!--pages/classify/jobDetail/jobDetail.wxml-->
+<view class='job-wrapper'>
+  <view class='job-title'>
+    <view class='title'> {{jobTitle}}</view>
+    <view class='jianzhi'>兼职</view>
+    <view class='jiesuan'>{{jobTreat}}</view>
+    
+  </view>
+  <view class='job-school'>本职位由本校学生提供</view>
+  <view class='job-detail'>
+    <view>工作时间：{{jobTime}}</view>
+    <view>工作地点：{{jobPlace}}</view>
+    <view>人员要求：{{jobRequire}}</view>
+    <view>详情描述：{{jobDiscripe}}</view>
+    <view>发布者：{{jobPoster}}</view>
+    <view>联系方式：{{jobContactWay}}</view>
+  </view>
+</view>

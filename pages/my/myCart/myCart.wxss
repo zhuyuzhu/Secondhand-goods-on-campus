@@ -1,0 +1,114 @@
+/* pages/shoppingCart/shoppingCart.wxss */
+.cart-box {
+  margin-bottom: 60rpx;
+}
+.cart-goods {
+  display: flex;
+  flex-direction: row;
+  padding: 30rpx;
+  border-bottom: 3rpx solid #e6e6e6;
+}
+
+.cart-icon {
+  display: inline-block;
+  margin: auto 10rpx;
+  margin-left: -10rpx;
+}
+
+.cart-img {
+  display: flex;
+  width: 580rpx;
+  height: 260rpx;
+}
+
+.cart-img image {
+  margin: auto 0rpx;
+  width: 165rpx;
+  height: 225rpx;
+}
+
+.cart-goods .cart-message {
+  width: 380rpx;
+  display: flex;
+  flex-direction: column;
+  margin: 0 20rpx;
+  justify-content: space-around;
+}
+
+.name {
+  font-weight: 600;
+  color: #4a4a4a;
+  font-size: 32rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.author, .press, .price {
+  font-size: 28rpx;
+  color: #9e9e9e;
+  font-weight: 300;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+  .delete {
+    position: absolute;
+    right: 40rpx;
+    margin-top: -10rpx;
+  }
+
+.cart-bottom {
+  position: fixed;
+  width: 100%;
+  height: 100rpx;
+  background-color: white;
+  bottom: 0rpx;
+}
+
+.cart-allPrice {
+  float: left;
+  padding: 0.5rem;
+  font-weight: 100;
+  margin-left: 90rpx;
+}
+
+.allPrice {
+  float: left;
+  padding: 0.5rem;
+  font-weight: 100;
+  margin-left: -30rpx;
+  color: #f40;
+}
+
+.cart-allSelect {
+  float: left;
+  padding: 0.5rem;
+  margin-left: -23rpx;
+  font-weight: 100;
+}
+
+.cart-iconAll {
+  float: left;
+  padding: 0.5rem;
+  margin-top: 7rpx;
+}
+
+.btn-red {
+  background-color: #f44336; /* 红色 */
+  font-size: 40rpx;
+}
+
+button {
+  position: fixed;
+  right: 0;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 30rpx;
+  border-radius: 0rpx;
+  width: 30%;
+  height: 100rpx;
+  line-height: 100rpx;
+}

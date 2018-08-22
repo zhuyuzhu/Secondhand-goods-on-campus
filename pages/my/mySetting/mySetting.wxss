@@ -1,0 +1,61 @@
+/* pages/my/mySetting/mySetting.wxss */
+page{
+  padding-bottom: 0rpx;
+}
+.wrapper {
+  color: #000;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(http://192.168.191.60/static/img/default/background1.jpg);
+  background-position: -1260rpx 0rpx;
+ 
+}
+.title {
+  position: absolute;
+  top: 120rpx;
+  left: 50%;
+  margin-left: -260rpx;
+  font-size: 40rpx;
+}
+
+.student {
+  position: absolute;
+  top: 280rpx;
+  left: 120rpx;
+}
+.student_id {
+  display: inline-block;
+}
+.student_id::after {
+  color: white;
+}
+.pass {
+  position: absolute;
+  top: 440rpx;
+  left: 120rpx;
+}
+.pass_word {
+  display: inline-block;
+}
+.holder {
+  font-size: 30rpx;
+  color: white;
+}
+.btn {
+  position: absolute;
+  top: 610rpx;
+  left: 215rpx;
+  width: 270rpx;
+  height: 90rpx;
+  
+  font-size: 18px;
+}
+input {
+  position: absolute;
+  top: 0rpx;
+  left: 100rpx;
+  width: 260rpx;
+  height: 50rpx;
+  border: 1rpx solid #555;
+  background-color: rgb(255, 153, 0);
+}

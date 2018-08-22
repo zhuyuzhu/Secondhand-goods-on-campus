@@ -1,0 +1,46 @@
+/* pages/address/address.wxss */
+.hander {
+  display: flex;
+  width: 100%;
+  height: 60rpx;
+  background: #666666;
+  justify-content: flex-start;
+  align-items: center;
+  color: whitesmoke;
+}
+.form-list {
+  width: 90%;
+  margin: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+.form-item {
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  border-width: 0 0 1px 0;
+  border-bottom-style: solid;
+  border-color: gray;
+}
+.form-item-lable{
+ margin-left: 40rpx;
+  width: 300rpx;
+  height: 100%;
+  line-height: 80rpx;
+}
+.form-item-button {
+  color: gray;
+}
+input {
+  margin-left: 40rpx;
+}
+button {
+  width: 100%;
+  margin-top:20rpx;
+  text-align: center;
+  background: ec6a5c;
+  color: white;
+}
+.save-btn {
+  background-color: #1E68C9
+}

@@ -1,0 +1,78 @@
+<view class="header1" >
+  <view bindtap='myOrder'>待收货</view>
+  <view bindtap='myConfirm'>已确认</view>
+  <view bindtap='mySeel'>我的售卖</view>
+</view>
+<view wx:if="{{state < 1}}">
+ <view class="order_list" wx:if="{{ hasorderindex }}">
+  <view class="order_detail" wx:for="{{ orderindex }}" wx:key="id" wx:for-index="booknumber" wx:for-item="looporder" >
+    <view  wx:for="{{ looporder }}" wx:for-item="order" >
+     <view wx:if="{{looporder.length-index > 1}}">
+      <view class="order_complete">
+        <view>
+          <image class="order_image" src="{{ order.imgurl }}"></image>
+        </view>
+        <view class="order_content">
+          <view>{{ order.book_titel }}</view>
+          <view>{{ order.intro }}</view>
+        </view>
+        <view class="order_price">
+          <view style='color:orange'>¥{{ order.price }}</view>
+          <view>✖️{{ order.num }}</view>
+        </view>
+      </view>
+    </view>
+   </view>
+    <view class="order_totalprice">
+        合计：¥{{ looporder[looporder.length-1].totalprice }}(含运费¥0.00)
+    </view>
+    <view class="order_options">
+      <view class="options_button">
+          查看物流
+      </view>
+      <view class="options_button">
+          确认收货
+      </view>
+    </view>
+  </view>
+</view>
+<view class="empty" wx:else>
+  <image src='/image/emptyorder.png'></image>
+  <view>您还没有相关的订单</view>
+  <view>可以看看有什么需要的</view>
+</view>
+</view>
+
+<view wx:if="{{ state > 0 }}">
+  <view wx:if="{{ state < 2 }}">
+    <view class="order_list" wx:if="{{ hasSeelList }}">
+      <view class="order_detail" wx:for="{{ seelList }}" wx:key="id" wx:for-index="booknumber" wx:for-item="looporder" >
+        <view  wx:for="{{ looporder }}" wx:for-item="order" >
+            <view class="order_complete">
+              <view>
+                 <image class="order_image" src="{{ order.imgurl }}"></image>
+              </view>
+              <view class="order_content">
+                <view>{{ order.book_titel }}</view>
+                <view>{{ order.intro }}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view wx:else class="empty">
+        <image src='/image/emptyorder.png'></image>
+        <view>您还没有相关的订单</view>
+        <view>可以看看有什么闲置不用的书要售卖么?</view>
+      </view>
+    </view>
+  </view>
+
+<view wx:if="{{ state > 1 }}">
+  <view class="empty">
+    <image src='/image/emptyorder.png'></image>
+    <view>您还没有相关的订单</view>
+    <view>可以看看有什么需要的</view>
+  </view>
+</view>
+

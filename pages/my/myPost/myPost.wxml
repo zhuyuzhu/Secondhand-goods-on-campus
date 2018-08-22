@@ -1,0 +1,33 @@
+<!--pages/my/myPost/myPost.wxml-->
+<view class="weui-cells weui-cells_after-title">
+  <block wx:if="{{postList.length>0}}">
+
+    <view class="weui-media-box weui-media-box_text" wx:for="{{postList}}" wx:key="{{item.objectId}}">
+      <view class="weui-media-box__title weui-media-box__title_in-text">
+        {{item.bookName}}</view>
+      <view wx:if="{{item.isTextbook}}" class="weui-media-box__desc">课程：{{item.courseName}}</view>
+      <view class="weui-media-box__desc">ISBN：{{item.bookISBN}}</view>
+      <view class="weui-media-box__desc">作者：{{item.bookAuthor}}</view>
+      <view class="weui-media-box__desc">出版社：{{item.bookPress}}</view>
+      <view class="weui-media-box__desc">成色：{{item.condition}}</view>
+      <view class="weui-media-box__desc">原价：{{item.bookPrice}}</view>
+      <view class="weui-media-box__desc">售价：{{item.currentPrice}}元</view>
+      <image style="width:125px; height:200px" src="{{item.bookImg}}" mode="aspectFit" />
+      <view class="weui-media-box__info">
+        <view class="weui-media-box__info__meta weui-media-time">{{item.updatedAt}}</view>
+        <view class="weui-media-box__info__meta weui-media-box__info__operate">
+          <icon type="cancel" size="16"></icon>
+          <text class="del" catchtap="deletePost" data-id="{{item.objectId}}">删除</text>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="weui-media-box weui-media-box_text">
+      <view class="weui-media-box__title weui-media-box__title_in-text">
+        暂无发布</view>
+      <view class="weui-media-box__desc"></view>
+
+    </view>
+  </block>
+</view>

@@ -1,0 +1,46 @@
+<navigator class="top" url="mySetting/mySetting">
+
+  <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class='btn-logn'>
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+     <text class="userinfo-nickname" style='margin-left:-140rpx;'>{{userInfo.nickName}}</text>
+     <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+     <view style='margin-top:-26rpx; margin-left:-80rpx'>{{studentId}}</view>
+  </button>
+  <view wx:else>请升级微信版本</view>
+
+ 
+</navigator>
+
+
+<view class="weui-cells weui-cells_after-title">
+
+  <navigator url="myPost/myPost" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">我的发布</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+
+  <navigator url="myorder/myorder" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">我的订单</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+
+  <navigator url="purchaseHistory/purchaseHistory" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">购买记录</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+
+  <navigator url="addressAdmin/addressAdmin" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">地址管理</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+  <navigator url="myCart/myCart" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">购物车</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+  <navigator url="systemNotification/systemNotification" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">系统通知</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+  <button class="btm" bindtap='bindClear'>退出帐号</button>
+
+</view>

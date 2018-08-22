@@ -1,0 +1,18 @@
+<!--pages/sonShouye/headline/headline.wxml-->
+<view class='wrapper'>
+  <view class='title'>校园头条资讯</view>
+  <view class='headline'>
+    <scroll-view scroll-y >
+      <block wx:for="{{headlineData}}"  wx:key="{{headlineData}}">
+        <view class='headline-item'>
+        <image src='{{item.url}}' class='headline-image'></image>
+        <view class='headline-cont'>
+          <view class='article-title'>{{item.title}}</view>
+        
+          <view>{{item.time}}</view>
+        </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>

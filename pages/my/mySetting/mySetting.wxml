@@ -1,0 +1,13 @@
+<!--pages/my/mySetting/mySetting.wxml-->
+<view class='wrapper'>
+  <view class='title'>湖北科技学院唤宝小程序认证</view>
+  <view class='student'>
+  <view class='student_id'>学号:</view>
+  <input value='{{studentId}}' placeholder="20开头" placeholder-class='holder' bindblur='ipnutStudentId'>{{studentId}}</input>
+  </view>
+ <view class='pass'>
+  <view class='pass_word'>密码:</view>
+ <input value='{{passWord}}'placeholder="身份证后六位" placeholder-class='holder' bindblur ='inputPassWord' password="{{true}}">{{passWord}}</input>
+ </view>
+ <button type="primary"  size="default"  class='btn' disabled="{{studentId == ''||passWord == ''||buttonLoading ? true : false}}" loading="{{buttonLoading}}" bindtap="bindSubmit">点击验证</button>
+</view>

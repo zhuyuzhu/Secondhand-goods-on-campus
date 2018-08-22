@@ -1,0 +1,21 @@
+<!--pages/movie-grid/movie-grid.wxml-->
+
+<template name="movie-grid">
+  <view class='movie-wrapper' data-id='{{bookid}}'bindtap='toDetail' data-id='{{bookid}}'>
+    <view class='movie-content'>
+      <image class='poster' src='{{picture}}'></image>
+      <text class='name'>{{bname}}</text>
+      <text class='wish-count'>￥{{bprice}}</text>
+    </view>
+  </view>
+</template>
+
+<template name="movie-grid2">
+  <view class='movie-wrapper' data-id='{{goodid}}'bindtap='toThingsDetail' data-id='{{goodid}}'>
+    <view class='movie-content'>
+      <image class='poster' src='{{gpicture}}'></image>
+      <text class='name'>{{gname}}</text>
+      <text class='wish-count'>￥{{gprice}}</text>
+    </view>
+  </view>
+</template>

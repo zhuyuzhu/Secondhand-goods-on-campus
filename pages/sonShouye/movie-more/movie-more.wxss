@@ -1,0 +1,42 @@
+/* pages/movie-more/movie-more.wxss */
+@import "../movie-list/movie-list.wxss"; 
+
+.session-tab {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  top: 0rpx;
+  background-color: #fff;
+  z-index: 2;
+  border-width: 2rpx 0;
+  border-color: #e9e9e9;
+  border-style: solid;
+}
+.tab-name {
+  flex: 1;
+  font-size: 32rpx;
+  font-weight: 500;
+  text-align: center;
+  height: 84rpx;
+  line-height: 84rpx;
+}
+.tab-normal {
+  color: #888;
+}
+.tab-select {
+  color: blue;
+  border-bottom: 4rpx solid blue;
+}
+.session-movie {
+  margin-top: 84rpx;
+  background: #fff;
+}
+.scroll-movie {
+  height: 100vh;
+}
+.bottom {
+  font-size: 28rpx;
+  color: #e9e9e9;
+  text-align: center;
+  background-color: #666;
+}

@@ -1,0 +1,84 @@
+{
+  "pages": [
+    "pages/shouye/shouye",
+    "pages/shoppingCart/shoppingCart",
+    "pages/my/my",
+    "pages/logs/logs",
+    "pages/index/index",
+    "pages/release/release",
+    "pages/order/order",
+    "pages/search/search",
+    "pages/search-book/search-book",
+    "pages/post/post",
+    "pages/weather/weather",
+    "pages/movie-detail/movie-detail",
+    "pages/components/news/news",
+    "pages/components/weatherLocationTrand/weatherLocationTrand",
+    "pages/components/recommend/recommend",
+    "pages/sonShouye/movie-more/movie-more",
+    "pages/sonShouye/movie-list/movie-list",
+    "mapWeather/search/search",
+    "mapWeather/regeocoding/regeocoding",
+    "mapWeather/suggestion/suggestion",
+    "mapWeather/weather/weather",
+    "pages/my/mySetting/mySetting",
+    "pages/my/myPost/myPost",
+    "pages/my/myorder/myorder",
+    "pages/my/purchaseHistory/purchaseHistory",
+    "pages/my/addressAdmin/addressAdmin",
+    "pages/my/myCart/myCart",
+    "pages/my/systemNotification/systemNotification",
+    "pages/classify/thing-search/thing-search",
+    "pages/classify/sale/sale",
+    "pages/classify/welfare/welfare",
+    "pages/classify/job/job",
+    "pages/sonShouye/headline/headline",
+    "pages/classify/jobDetail/jobDetail",
+    "pages/thing-detail/thing-detail",
+    "pages/search-thing-result/search-thing-result"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#1E68C9",
+    "backgroundTextStyle": "dark",
+    "navigationBarTitleText": "校园二手交易",
+    "navigationBarTextStyle": "#fff",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/shouye/shouye",
+        "iconPath": "images/tabBar/home.png",
+        "selectedIconPath": "images/tabBar/home.fill.png"
+      },
+      {
+        "text": "购物车",
+        "pagePath": "pages/shoppingCart/shoppingCart",
+        "iconPath": "images/tabBar/shoppingCart.png",
+        "selectedIconPath": "images/tabBar/shoppingCart.fill.png"
+      },
+      {
+        "text": "发布",
+        "pagePath": "pages/post/post",
+        "iconPath": "images/tabBar/release.png",
+        "selectedIconPath": "images/tabBar/release.png"
+      },
+      {
+        "text": "订单",
+        "pagePath": "mapWeather/weather/weather",
+        "iconPath": "images/tabBar/order.png",
+        "selectedIconPath": "images/tabBar/order.fill.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/my/my",
+        "iconPath": "images/tabBar/mine.png",
+        "selectedIconPath": "images/tabBar/mine.fill.png"
+      }
+    ],
+    "color": "#000000",
+    "selectedColor": "#1E68C9"
+  },
+  "debug": true
+}

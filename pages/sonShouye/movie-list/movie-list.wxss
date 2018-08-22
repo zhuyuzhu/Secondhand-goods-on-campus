@@ -1,0 +1,64 @@
+/* pages/movie-list/movie-list.wxss */
+
+.movie-wrapper {
+  padding: 30rpx;
+  border-bottom: 3rpx solid #e6e6e6;
+}
+.movie-content {
+  display: flex;
+  flex-direction: row;
+
+}
+ .poster {
+  width: 185rpx;
+  height: 260rpx;
+
+}
+ .movie-summary {
+  width: 380rpx;
+  display: flex;
+  flex-direction: column;
+  margin: 0 20rpx;
+  justify-content: space-between
+}
+ .name{
+  font-weight: 600;
+  color: #4a4a4a;
+  font-size: 32rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+ .directors, 
+  .casts,
+  .genres,
+  .wish-count {
+    font-size: 30rpx;
+    color: #9e9e9e;
+    font-weight: 300;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    
+  }
+  .price {
+     font-size: 36rpx;
+    color: #f40;
+    font-weight: 300;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .movie-content .wish-btn, .tickeck-btn {
+  width: 90rpx;
+  height: 50rpx;
+  color: blue;
+  font-size: 28rpx;
+  align-self: center;
+  line-height: 50rpx;
+  border-radius: 6rpx;
+  border-width: 3rpx;
+  border-style: solid;
+  border-color: #9dbff9;
+  text-align: center;
+}
