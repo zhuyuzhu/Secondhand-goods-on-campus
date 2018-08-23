@@ -6,7 +6,8 @@
 
   </view>
 </view>
-<view class="cart-box">
+<!-- 书本 -->
+<view class="cart-box" wx:if="{{selectBook}}">
   <!-- wx:for 渲染购物车列表 -->
   <view wx:for="{{carts}}" wx:key="{{carts}}" class='cart-goods'>
     <!-- wx:if 是否选择显示不同图标 -->
@@ -28,7 +29,29 @@
   </view>
   <view wx:if="{{isMyCartShow}}" class='bottom'>没有书本啦~_~</view>
 </view>
-
+<!-- 物品 -->
+<view class="cart-box" wx:if="{{selectThing}}">
+  <!-- wx:for 渲染购物车列表 -->
+  <view wx:for="{{carts}}" wx:key="{{carts}}" class='cart-goods'>
+    <!-- wx:if 是否选择显示不同图标 -->
+    <icon wx:if="{{item.selected}}" class='cart-icon' type="success" color="red" bindtap="selectList" data-index="{{index}}" />
+    <icon wx:else type="circle" class='cart-icon' bindtap="selectList" data-index="{{index}}" />
+    <view  class='cart-img'>
+      <image class="cart-thumb" src="{{item.picture}}"></image>
+      <view class='cart-message'>
+        <text class='name'>书名：{{item.bname}}</text>
+        <text class='author'>作者：{{item.author}}</text>
+        <text class='press'>出版社：{{item.press}}</text>
+        <text class='price'>价格：￥{{item.bprice}}</text>
+      </view>
+    </view>
+    <!-- 点击商品图片可跳转到商品详情 -->
+    
+    <!-- 删除按钮 -->
+    <text bindtap="deleteList" data-index="{{index}}" class='delete'> × </text>
+  </view>
+  <view wx:if="{{isMyCartShow}}" class='bottom'>没有书本啦~_~</view>
+</view>
 <!-- 底部操作栏 -->
 <view class='cart-bottom'>
   <!-- wx:if 是否全选显示不同图标 -->

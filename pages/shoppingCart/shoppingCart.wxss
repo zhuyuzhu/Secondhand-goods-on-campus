@@ -18,7 +18,6 @@
 .noSelect {
   width: 50%;
   text-align: center;
-  background-color: green;
 }
 .cart-box {
    margin-top: 50rpx;
