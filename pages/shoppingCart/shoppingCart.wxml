@@ -1,8 +1,8 @@
 <!--pages/shoppingCart/shoppingCart.wxml-->
 <view class='box'>
   <view class='wrapper'>
-    <view class="tab-content select  " bindtap='chooseBookCart'>书本</view>
-    <view class="tab-content noSelect" bindtap='chooseThingCart'>物品</view>
+    <view class="tab-content {{selectBook? 'select': 'noSelect'}}" bindtap='chooseBookCart'>书本</view>
+    <view class="tab-content {{selectThing? 'select': 'noSelect'}}" bindtap='chooseThingCart'>物品</view>
 
   </view>
 </view>

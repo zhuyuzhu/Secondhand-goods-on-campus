@@ -7,6 +7,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+    selectTab: true,
+    selectBook: true,
+    selectThing: false, 
+
     carts: [], // 购物车列表
     hasList: false, // 列表是否有数据
     totalPrice: orginalPrice.toFixed(2), // 总价，初始为0
@@ -15,6 +19,8 @@ Page({
     isMyCartShow: false,
     studentId: '', 
     myCartBookLength: '5',
+
+
   },
 
   /**
@@ -256,5 +262,21 @@ getMyCartList(){
     } else {                              // 如果不为空
       this.getTotalPrice();           // 重新计算总价格
     }
+  },
+  chooseBookCart() {
+    var that = this;
+    var selectBook = this.data.selectBook;
+    that.setData({
+      selectBook: true,
+      selectThing: false, 
+    })
+  },
+  chooseThingCart() {
+    var that = this;
+    var selectThing = that.data.selectThing;
+    that.setData({
+      selectBook: false,
+      selectThing: true,
+    })
   }
 })
