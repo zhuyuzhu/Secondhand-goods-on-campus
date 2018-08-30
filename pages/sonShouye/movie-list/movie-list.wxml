@@ -23,6 +23,7 @@
         <text class="name">{{gname}}</text>
         <text class="directors">校区：{{gcollege}}</text>
         <text class='casts'>成色：{{gstatus}}</text>
+        <text class='casts'>发布者：{{usersname}}</text>
         <text class='price'>￥{{gprice}}</text>
        
       </view>

@@ -15,9 +15,11 @@ Page({
       thingPhoneNumber: '', //联系方式
       thingDescribe: '', //描述备注
       poster: '', //发布者
-      thingId: '',
-      studentId: '',
-    }
+     
+    },
+    hadAddCart: false,  //已经加入购物车
+    studentId: '',
+    thingId: '',
   },
 
 
@@ -41,10 +43,22 @@ Page({
     var thingCampus = 'detailData.thingCampus';
     var thingPhoneNumber = 'detailData.thingPhoneNumber';
     var thingDescribe = 'detailData.thingDescribe';
-    var thingId = 'detailData.thingId';
-    var studentId = 'detailData.studentId';
+    var thingId = that.data.thingId;
+    var studentId = that.data.studentId;
     var poster = 'detailData.poster';
     var url = app.globalData.huanbaoBase + 'getbythingid.php';
+    try {
+      var value = wx.getStorageSync('studentIdSync')
+      if (value) {
+        console.log(value); //同步得到studentId的值
+        that.setData({
+          studentId: value
+        })
+      }
+    } catch (e) {
+      console.log(0);
+    }
+    console.log(studentId);
     wx.request({
       url,
       method: 'POST',
@@ -65,8 +79,8 @@ Page({
           [thingCampus]: data.gcollege, //校区
           [thingPhoneNumber]: data.phone, //联系方式
           [thingDescribe]: data.gnote || '无描述', //描述
-          [thingId]: data.goodid, //物品id
-          [studentId]: data.studentID, //学生id
+          thingId: data.goodid, //物品id
+          
           [poster]: data.usersname, //发布者
         })
       } //此处的res就是data对象
@@ -84,7 +98,20 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    var that = this;
+    var studentId = that.data.studentId; //学生id
+    try { 
+      var value = wx.getStorageSync('studentIdSync')
+      if (value) {
+        console.log(value); //同步得到studentId的值
+        that.setData({
+          studentId: value
+        })
+      }
+    } catch (e) {
+      console.log(0);
+    }
+    console.log(studentId);
   },
 
   /**
@@ -119,6 +146,76 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
+
+  },
+  addMyCart() {
+    var that = this;
+    var hadAddCart = that.data.hadAddCart;
+    var studentId = that.data.studentId;
+    var thingId = that.data.thingId;
+    var url = app.globalData.huanbaoBase + 'thingcar.php'
+    console.log(studentId);
+    if (studentId) {
+      console.log(studentId);
+      if (!hadAddCart && studentId && thingId) {
+        wx.showModal({
+          title: '提示',
+          content: '是否加入购物车',
+          success: function (res) {
+            if (res.confirm) {
+              console.log('用户点击确定')
+              wx.request({
+                url, //仅为示例，并非真实的接口地址
+                method: 'POST',
+                data: {
+                  studentId: studentId,
+                  thingId: thingId,
+                },
+                header: {
+                  'content-type': 'application/x-www-form-urlencoded' // 默认值
+                },
+                success: function (res) {
+                  console.log(res);
+                  that.setData({
+                    hadAddCart: true
+                  })
+                  wx.showToast({
+                    title: '成功',
+                    icon: 'success',
+                    duration: 1000
+                  })
+                }
+              })
+
+            } else if (res.cancel) {
+              console.log('用户点击取消')
+            }
+          }
+        })
+
+      } else {
+        wx.showModal({
+          title: '提示',
+          content: '请勿重复添加',
+
+        })
+      }
+    } else{
+      wx.showModal({
+        title: '提示',
+        content: '请认证您的身份',
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+            wx.navigateTo({
+              url: '../my/mySetting/mySetting',
+            })
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
+      })
+    }
 
   }
 })

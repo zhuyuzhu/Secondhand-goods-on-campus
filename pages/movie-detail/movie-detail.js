@@ -61,7 +61,7 @@ Page({
     } catch (e) {
       console.log(0);
     }
-  
+    console.log(studentId);
     wx.request({
       url,
       method: 'POST',
@@ -113,6 +113,7 @@ Page({
     } catch (e) {
       console.log(0);
     }
+    console.log(studentId);
   },
 
   /**

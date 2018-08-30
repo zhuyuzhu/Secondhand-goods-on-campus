@@ -266,7 +266,7 @@ getMyCartList(){
   },
   chooseBookCart() {
     var that = this;
-    var selectBook = this.data.selectBook;
+    var selectBook = that.data.selectBook;
     var selectThing = that.data.selectThing;
     var studentId = that.data.studentId;
     var thingId = that.data.thingId;
@@ -280,7 +280,7 @@ getMyCartList(){
   chooseThingCart() {
     var that = this;
     var selectThing = that.data.selectThing;
-    var selectBook = this.data.selectBook;
+    var selectBook = that.data.selectBook;
     var studentId = that.data.studentId;
     var thingId = that.data.thingId;
     var url = app.globalData.huanbaoBase + 'getthingsbystudentid.php';
@@ -288,6 +288,8 @@ getMyCartList(){
       selectBook: false,
       selectThing: true,
     })
+    console.log(studentId);
+    console.log(thingId);
     wx.request({
       url,
       method: 'POST',
