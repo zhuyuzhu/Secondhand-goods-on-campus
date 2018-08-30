@@ -358,14 +358,16 @@ Page({
         },
         method: "POST",
         header: {
-          'content-type': 'application/x-www-form-urlencoded '
+          'content-type': 'application/x-www-form-urlencoded'
         },
         success: function(res) {
-          console.log(res);
+          console.log(res);//此处控制台打印出来是乱码
+          console.log(url);//此处控制台打印正确URL
+          console.log(urlImg);//此处控制台打印正确URL
           var currenttime = util.formatTime(new Date());
           var currentdate = util.formatDate(new Date());
           var bookId = res.data;
-          const uploadTask = wx.uploadFile({
+          wx.uploadFile({
             url: urlImg,
             filePath: bookImg1[0],
             name: 'file',
@@ -473,7 +475,7 @@ Page({
         },
         method: "POST",
         header: {
-          'content-type': 'application/x-www-form-urlencoded '
+          'content-type': 'application/x-www-form-urlencoded'
         },
         success: function(res) {
           console.log(res);

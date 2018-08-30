@@ -144,7 +144,7 @@ App({
     userInfo: null
   },
   // 下拉刷新
-  //下拉刷新
+
   onPullDownRefresh: function () {
     wx.showNavigationBarLoading() //在标题栏中显示加载
 
@@ -153,17 +153,20 @@ App({
       // complete
       wx.hideNavigationBarLoading() //完成停止加载
       wx.stopPullDownRefresh() //停止下拉刷新
-    }, 1500);
+    }, 1000);
   },
   // 获取电影的数据URL
   globalData: {
     userInfo: null,
     huanbaoBase: 'https://www.hukebme.com/',  //唤宝的网址
-    // huanbaoBase: 'http://192.168.0.111/',
+    huanbaoBase: 'http://192.168.0.111/',
     // doubanBase: 'https://douban.uieee.com',
+    //huanbaoBase: 'http://localhost/',
     ResourcesURL: '/v2/movie/search?q=',
     inThearters: '/v2/movie/in_theaters',//热映
     comingSoon: '/v2/movie/coming_soon',//即将上映
     subject: '/v2/movie/subject/'
-  }
+  },
+
+
 })

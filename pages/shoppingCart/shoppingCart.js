@@ -20,6 +20,7 @@ Page({
     studentId: '', 
     myCartBookLength: '5',
 
+    thingId: '',
 
   },
 
@@ -266,17 +267,38 @@ getMyCartList(){
   chooseBookCart() {
     var that = this;
     var selectBook = this.data.selectBook;
+    var selectThing = that.data.selectThing;
+    var studentId = that.data.studentId;
+    var thingId = that.data.thingId;
+    var url = app.globalData.huanbaoBase + 'getthingsbystudentid.php';
     that.setData({
       selectBook: true,
       selectThing: false, 
     })
+ 
   },
   chooseThingCart() {
     var that = this;
     var selectThing = that.data.selectThing;
+    var selectBook = this.data.selectBook;
+    var studentId = that.data.studentId;
+    var thingId = that.data.thingId;
+    var url = app.globalData.huanbaoBase + 'getthingsbystudentid.php';
     that.setData({
       selectBook: false,
       selectThing: true,
+    })
+    wx.request({
+      url,
+      method: 'POST',
+      header: { 'content-type': 'application/x-www-form-urlencoded ' },
+      data: {
+        studentId: studentId,
+        lastId: thingId,
+      },
+      success: res => {
+        console.log(res);
+      }
     })
   }
 })
