@@ -51,7 +51,7 @@
     <!-- 删除按钮 -->
     <text bindtap="deleteListThing" data-index="{{index}}" class='delete'> × </text>
   </view>
-  <view wx:if="{{isThingCartShow}}" class='bottom'>没有书本啦~_~</view>
+  <view wx:if="{{isThingCartShow}}" class='bottom'>没有物品啦~_~</view>
 </view>
 <!-- 底部操作栏 -->
 <view class='cart-bottom'>

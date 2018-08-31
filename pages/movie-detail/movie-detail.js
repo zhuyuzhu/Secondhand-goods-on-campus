@@ -21,6 +21,7 @@ Page({
     hadAddCart: false ,  //已经加入购物车
     studentId: '',  
     bookId: '',
+
   },
 
   /**
@@ -218,5 +219,30 @@ Page({
       })
     }
 
+  },
+  nowBuy() {
+    var url = app.globalData.huanbaoBase + 'tempbooks.php';
+    var bookId = this.data.bookId;
+    wx.request({
+      url, //仅为示例，并非真实的接口地址
+      method: 'POST',
+      data: {
+        bookId: bookId
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success: function (res) {
+       console.log(res.data);
+      if(res.data === '1'){
+        this.ReservationPayment();//预约付款
+      }else {
+        wx.showModal({
+          title: '提示',
+          content: '该商品已下架',
+        })
+      }
+      }
+    })
   }
 })
