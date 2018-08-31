@@ -150,7 +150,7 @@ getBookCartList(){
           selected: false,
           ...item
         }
-        carts.unshift(messege); //实现购物车的最近添加的物品，展现在最前面
+        carts.push(messege); //实现购物车的最近添加的物品，展现在最前面
       })
 
       that.setData({
@@ -172,6 +172,9 @@ getBookCartList(){
     var thingId = that.data.thingId;
     var myCartThingLength = that.data.myCartThingLength;
     var studentId = that.data.studentId;
+    var selectBook = that.data.selectBook;
+    var selectThing = that.data.selectThing;
+    
     console.log(thingId, myCartThingLength);
     // if (myCartThingLength < 5) {
     //   that.setData({
@@ -217,7 +220,7 @@ getBookCartList(){
             selected: false,
             ...item
           }
-          thingCarts.unshift(messege); //实现购物车的最近添加的物品，展现在最前面
+          thingCarts.push(messege); //实现购物车的最近添加的物品，展现在最前面
         })
 
         that.setData({
@@ -473,13 +476,16 @@ getBookCartList(){
     var that = this;
     var selectThing = that.data.selectThing;
     var selectBook = that.data.selectBook;
+    var selectAllStatus = that.data.selectAllStatus;
     that.setData({
       selectBook: false,
       selectThing: true,
+      
     })
+    // 此时data中的数据改变，但是此时的属性值还未改变
     
     that.getThingCartList()
-
+    
   },
   judgeThingAllStatus: function(){
     var that = this;
