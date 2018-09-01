@@ -13,7 +13,6 @@
 
 page {
   background-color: #f3f3f3;
-  padding-bottom: 20rpx;
   font-family: "微软雅黑", "宋体";
 }
 

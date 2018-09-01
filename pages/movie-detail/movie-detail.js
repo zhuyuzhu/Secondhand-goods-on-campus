@@ -62,7 +62,7 @@ Page({
     } catch (e) {
       console.log(0);
     }
-    console.log(studentId);
+    console.log(studentId);//此处是获取不到值的
     wx.request({
       url,
       method: 'POST',
@@ -221,6 +221,7 @@ Page({
 
   },
   nowBuy() {
+    var that = this;
     var url = app.globalData.huanbaoBase + 'tempbooks.php';
     var bookId = this.data.bookId;
     wx.request({
@@ -234,8 +235,8 @@ Page({
       },
       success: function (res) {
        console.log(res.data);
-      if(res.data === '1'){
-        this.ReservationPayment();//预约付款
+      if(res.data === 1){
+        that.ReservationPayment();//预约付款
       }else {
         wx.showModal({
           title: '提示',
@@ -244,5 +245,9 @@ Page({
       }
       }
     })
+  },
+  ReservationPayment(){
+    var url = app.globalData.huanbaoBase + ' buybook.php';
+    console.log("预约购买")
   }
 })

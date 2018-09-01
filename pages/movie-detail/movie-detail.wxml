@@ -1,27 +1,48 @@
 <!--pages/movie-detail/movie-detail.wxml-->
+<view class="{{theCover? 'cover' : ''}}"></view>
 <view class='detail'>
-  <image src='{{detailData.url}}' class='detail-image'>
-  </image>
-  <view class='detail-sale'>
-    <view class='detail-price'>￥{{detailData.price}}</view>
-    <image src='./1.png' class='detail-selling-price-img'></image>
-    <view class='detail-sell'>售价</view>
-  </view>
-  <view class='detail-cont'>
-    <view class='detail-title'>书名：{{detailData.bookName}}</view>
-    <view>作者：{{detailData.bookAuthor}}</view>
-    <view>出版社：{{detailData.bookPress}}</view>
-    <view class='detail-poster'>发布者：{{detailData.poster}}</view>
-    <view class='detail-detail-box'>
-    <image class='detail-detail-image' src='./2.png'></image>
+
+  <view class='wrapper'>
+
+    <image src='{{detailData.url}}' class='detail-image'>
+    </image>
+    <view class='detail-sale'>
+      <view class='detail-price'>￥{{detailData.price}}</view>
+      <image src='./1.png' class='detail-selling-price-img'></image>
+      <view class='detail-sell'>售价</view>
     </view>
-    <view style='color: green'>辅助资料：{{detailData.isTextbook? "是" : "不是"}}</view>
-    <view style='color: green'>校区：{{detailData.campus}}</view>
-    <view style='color: green'>成色：{{detailData.conditions}}</view>
-    <view class='detail-detail'>产品详情：{{detailData.remark}}</view>
+    <view class='detail-cont'>
+      <view class='detail-title'>书名：{{detailData.bookName}}</view>
+      <view>作者：{{detailData.bookAuthor}}</view>
+      <view>出版社：{{detailData.bookPress}}</view>
+      <view class='detail-poster'>发布者：{{detailData.poster}}</view>
+      <view class='detail-detail-box'>
+        <image class='detail-detail-image' src='./2.png'></image>
+      </view>
+      <view style='color: green'>辅助资料：{{detailData.isTextbook? "是" : "不是"}}</view>
+      <view style='color: green'>校区：{{detailData.campus}}</view>
+      <view style='color: green'>成色：{{detailData.conditions}}</view>
+      <view class='detail-detail'>产品详情：{{detailData.remark}}</view>
+    </view>
+    <view class='detail-bottom'>
+      <view class='addCart' bindtap='addMyCart'>加入购物车</view>
+      <view class='buyNow' bindtap='nowBuy'>立即购买</view>
+    </view>
   </view>
-  <view class='detail-bottom'>
-    <view class='addCart' bindtap='addMyCart'>加入购物车</view>
-    <view class='buyNow' bindtap='nowBuy'>立即购买</view>
+  <view class='pay'>
+    <view class='book-detail'>
+      <image src='{{detailData.url}}' class='pay-img'></image>
+      <view class='book-messege'>
+        <view class='bookName'>{{detailData.bookName}}</view>
+        <view class='bookPoster'>发布者：{{detailData.poster}}</view>
+        <view class='bookPrice'>价格：￥{{detailData.price}}</view>
+      </view>
+      <text bindtap="deleteList" data-index="{{index}}" class='delete'> × </text>
+    </view>
+    <view class='content'>
+      <view class='prompt'>提示：预约购买成功后，您将获得卖家的联系方式，请及时与卖家取得联系，进行线下当面付款交易。</view>
+      <view class='attention'>注意：该产品在您预约购买后，会自动下架，您是该产品的唯一买家。</view>
+    </view>
+    <view class='book-buy'>预约购买</view>
   </view>
 </view>

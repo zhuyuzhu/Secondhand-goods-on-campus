@@ -1,6 +1,19 @@
 /* pages/movie-detail/movie-detail.wxss */
 .detail {
-  margin-bottom: 200rpx;
+  margin-bottom: -200rpx;
+}
+
+.cover {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100vh;
+  background-color: #333;
+  z-index: 10;
+  -moz-opacity: 0.7;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
 }
 .detail-cont {
   color: #666;
@@ -79,4 +92,66 @@
   background-color: #D0011B;
   flex: 1;
   line-height: 100rpx;
+}
+.pay {
+  position: fixed;
+  bottom: -640rpx;
+  height: 640rpx;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
+ /* animation: move 1s linear; */
+ transition: bottom 1000ms linear;
+}
+/* @keyframes move{
+  from {
+    bottom: -640rpx;
+  }
+  to {
+    bottom: 0rpx;
+  }
+} */
+.book-detail {
+  display: flex;
+}
+.pay-img{
+  width: 240rpx;
+  height: 280rpx;
+  margin: 20rpx;
+}
+.book-messege {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; 
+}
+.bookPrice {
+  color: #f40;
+}
+.delete {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  font-size: 48rpx;
+  color: #666;
+}
+
+.content {
+  background-color: #f3f3f3;
+}
+.attention,
+.prompt {
+  padding: 10rpx 20rpx;
+  font-family: tahoma,arial,\5FAE\8F6F\96C5\9ED1,sans-serif;
+  font: 12px/1.5 tahoma,arial,"\5b8b\4f53";
+  font: 400 12px/1.5 "Microsoft Yahei",tahoma,arial
+}
+.book-buy {
+  margin: 30rpx auto;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  width: 700rpx;
+  height: 80rpx;
+  background: linear-gradient(to right, #FF7802,#FF4A00);
+  border-radius: 40rpx;
 }
