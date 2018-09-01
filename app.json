@@ -67,7 +67,7 @@
       },
       {
         "text": "订单",
-        "pagePath": "mapWeather/weather/weather",
+        "pagePath": "pages/order/order",
         "iconPath": "images/tabBar/order.png",
         "selectedIconPath": "images/tabBar/order.fill.png"
       },

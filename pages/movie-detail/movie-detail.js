@@ -318,10 +318,16 @@ Page({
       success: function (res) {
         console.log(res);
         wx.showToast({
-          title: '成功',
+          title: '预购成功',
           icon: 'success',
-          duration: 1000
+          duration: 1500
         })
+        setTimeout(function(){
+          wx.switchTab({
+            url: '../order/order'
+          })
+        }, 1500)
+        
       }
     })
   }

@@ -206,7 +206,11 @@ Page({
         })
       },
     })
-   
+    var inTheartersURl = app.globalData.huanbaoBase + 'indexbook.php';
+    var comingSoonURL = app.globalData.huanbaoBase + 'indexthing.php'
+    //调用自定义函数，获取指定对象属性的数据；
+    this.getMovieListData(inTheartersURl, 'inThearters');
+    this.getMovieListData(comingSoonURL, 'comingSoon');
   },
 
   /**
@@ -292,7 +296,6 @@ Page({
       duration: 5000
     });
     wx.request({
-      
       url,//url:url,可以简写
       type: 'GET',
       header: { 'content-type': 'json' },
