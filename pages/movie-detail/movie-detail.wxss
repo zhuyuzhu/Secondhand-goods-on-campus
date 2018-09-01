@@ -1,6 +1,7 @@
 /* pages/movie-detail/movie-detail.wxss */
 .detail {
-  margin-bottom: -200rpx;
+  margin-bottom: -400rpx;
+  
 }
 
 .cover {
