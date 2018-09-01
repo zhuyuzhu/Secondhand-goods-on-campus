@@ -21,7 +21,9 @@ Page({
     hadAddCart: false ,  //已经加入购物车
     studentId: '',  
     bookId: '',
-
+    theCover: false,
+    thePay: false,
+    nickName: '',
   },
 
   /**
@@ -49,6 +51,7 @@ Page({
     var poster = 'detailData.poster';
     var studentId = that.data.studentId; //学生id
     var bookId = that.data.bookId;  //书本id
+    var nickName = that.data.nickName;
     var url = app.globalData.huanbaoBase + 'getbybookid.php';
 
     try {
@@ -62,6 +65,15 @@ Page({
     } catch (e) {
       console.log(0);
     }
+    wx.getStorage({
+      key: 'nickName',
+      success: function (res) {
+        console.log(res.data)
+        that.setData({
+          nickName: nickName
+        })
+      }
+    })
     console.log(studentId);//此处是获取不到值的
     wx.request({
       url,
@@ -102,12 +114,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var studentId = this.data.studentId; //学生id
+    var that = this;
+    var studentId = that.data.studentId; //学生id
+    var nickName = that.data.nickName;
     try {
       var value = wx.getStorageSync('studentIdSync')
       if (value) {
         console.log(value); //同步得到studentId的值
-        this.setData({
+        that.setData({
           studentId: value
         })
       }
@@ -115,6 +129,15 @@ Page({
       console.log(0);
     }
     console.log(studentId);
+    wx.getStorage({
+      key: 'nickName',
+      success: function (res) {
+        console.log(res.data)
+        that.setData({
+          nickName: nickName
+        })
+      }
+    })
   },
 
   /**
@@ -222,8 +245,27 @@ Page({
   },
   nowBuy() {
     var that = this;
-    var url = app.globalData.huanbaoBase + 'tempbooks.php';
     var bookId = this.data.bookId;
+    var theCover = that.data.theCover;
+    var thePay = that.data.thePay;
+    that.setData({
+      theCover: true,
+      thePay: true,
+    })
+  },
+  deletePay() {
+    var that = this;
+    var theCover = that.data.theCover;
+    var thePay = that.data.thePay;
+    that.setData({
+      theCover: false,
+      thePay: false,
+    })
+  },
+  buy() {
+    var that = this;
+    var bookId = this.data.bookId;
+    var url = app.globalData.huanbaoBase + 'tempbooks.php';
     wx.request({
       url, //仅为示例，并非真实的接口地址
       method: 'POST',
@@ -234,20 +276,53 @@ Page({
         'content-type': 'application/x-www-form-urlencoded' // 默认值
       },
       success: function (res) {
-       console.log(res.data);
-      if(res.data === 1){
-        that.ReservationPayment();//预约付款
-      }else {
-        wx.showModal({
-          title: '提示',
-          content: '该商品已下架',
-        })
-      }
+        console.log(res.data);
+        if (res.data === 1) {
+          that.ReservationPayment();//预约付款
+        } else {
+          wx.showModal({
+            title: '提示',
+            content: '该商品已下架',
+            success: function (res) {
+              if (res.confirm) {
+                console.log('用户点击确定')
+              } else if (res.cancel) {
+                console.log('用户点击取消')
+              }
+            }
+          })
+        }
       }
     })
   },
   ReservationPayment(){
-    var url = app.globalData.huanbaoBase + ' buybook.php';
+    var that = this;
+    var bookId = that.data.bookId;
+    var studentId = that.data.studentId;
+    var nickName = that.data.nickName;
+    var url = app.globalData.huanbaoBase + 'buybook.php';
+
     console.log("预约购买")
+    wx.request({
+      url, //仅为示例，并非真实的接口地址
+      method: 'POST',
+      data: {
+        bookId: bookId,
+        buyStatus: 1,
+        buyStudentID: studentId,
+        buyUsername: nickName,
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success: function (res) {
+        console.log(res);
+        wx.showToast({
+          title: '成功',
+          icon: 'success',
+          duration: 1000
+        })
+      }
+    })
   }
 })

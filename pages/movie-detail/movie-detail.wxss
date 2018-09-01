@@ -1,10 +1,10 @@
 /* pages/movie-detail/movie-detail.wxss */
+
 .detail {
-  margin-bottom: -400rpx;
-  
+  padding-bottom: 300rpx;
 }
 
-.cover {
+.coverFadeIn {
   position: absolute;
   top: 0%;
   left: 0%;
@@ -15,7 +15,9 @@
   -moz-opacity: 0.7;
   opacity: 0.7;
   filter: alpha(opacity=70);
+  transition: opacity 300ms linear;
 }
+
 .detail-cont {
   color: #666;
   margin-left: 10rpx;
@@ -94,24 +96,25 @@
   flex: 1;
   line-height: 100rpx;
 }
-.pay {
+.paySlideUp {
   position: fixed;
+  bottom: 0rpx;
+  height: 640rpx;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
+  transition: bottom 300ms linear;
+}
+.paySlideDown {
+   position: fixed;
   bottom: -640rpx;
   height: 640rpx;
   width: 100%;
   background-color: #fff;
   z-index: 999;
- /* animation: move 1s linear; */
- transition: bottom 1000ms linear;
+  transition: bottom 300ms linear;
 }
-/* @keyframes move{
-  from {
-    bottom: -640rpx;
-  }
-  to {
-    bottom: 0rpx;
-  }
-} */
+
 .book-detail {
   display: flex;
 }

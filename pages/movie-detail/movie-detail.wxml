@@ -1,9 +1,7 @@
 <!--pages/movie-detail/movie-detail.wxml-->
-<view class="{{theCover? 'cover' : ''}}"></view>
+<view class="{{theCover? 'coverFadeIn' : 'coverFadeOut'}}"></view>
 <view class='detail'>
-
   <view class='wrapper'>
-
     <image src='{{detailData.url}}' class='detail-image'>
     </image>
     <view class='detail-sale'>
@@ -29,7 +27,7 @@
       <view class='buyNow' bindtap='nowBuy'>立即购买</view>
     </view>
   </view>
-  <view class='pay'>
+  <view class="{{thePay? 'paySlideUp' : 'paySlideDown'}}">
     <view class='book-detail'>
       <image src='{{detailData.url}}' class='pay-img'></image>
       <view class='book-messege'>
@@ -37,12 +35,12 @@
         <view class='bookPoster'>发布者：{{detailData.poster}}</view>
         <view class='bookPrice'>价格：￥{{detailData.price}}</view>
       </view>
-      <text bindtap="deleteList" data-index="{{index}}" class='delete'> × </text>
+      <text bindtap="deletePay" data-index="{{index}}" class='delete'> × </text>
     </view>
     <view class='content'>
       <view class='prompt'>提示：预约购买成功后，您将获得卖家的联系方式，请及时与卖家取得联系，进行线下当面付款交易。</view>
       <view class='attention'>注意：该产品在您预约购买后，会自动下架，您是该产品的唯一买家。</view>
     </view>
-    <view class='book-buy'>预约购买</view>
+    <view class='book-buy' bindtap='buy'>预约购买</view>
   </view>
 </view>

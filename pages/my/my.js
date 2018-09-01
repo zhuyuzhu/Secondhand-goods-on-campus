@@ -11,8 +11,7 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     userInfo: {
       nickName: '个人信息',
-      avatarUrl: '',
-      
+      avatarUrl: '', 
     },
    
   },
@@ -63,7 +62,6 @@ Page({
    wx.getStorage({
      key: 'nickName',
      success: function(res) {
-       
        that.setData({
          [nickName]: res.data
        })
