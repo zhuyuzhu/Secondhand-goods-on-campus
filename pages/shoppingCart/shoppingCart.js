@@ -450,19 +450,30 @@ getBookCartList(){
     var selectAllStatus = this.data.selectAllStatus
     let thingCarts = this.data.thingCarts;
     let totalPrice = this.data.totalPrice;
-    thingCarts.splice(index, 1);              // 删除购物车列表里这个商品
-    this.setData({
-      thingCarts: thingCarts
-    });
-    if (thingCarts.length == 0) {                  // 如果购物车为空
-      this.setData({
-        hasList: false,             // 修改标识为false，显示购物车为空页面
-        selectAllStatus: false,
-        totalPrice: orginalPrice.toFixed(2)              //此时价格为0
-      });
-    } else {                              // 如果不为空
-      this.getTotalPrice();           // 重新计算总价格
-    }
+    wx.showModal({
+      title: '提示',
+      content: '将此产品移除购物车？',
+      success: res=> {
+        if(res.confirm){
+          console.log("用户点了确定")
+          thingCarts.splice(index, 1);              // 删除购物车列表里这个商品
+          this.setData({
+            thingCarts: thingCarts
+          });
+          if (thingCarts.length == 0) {                  // 如果购物车为空
+            this.setData({
+              hasList: false,             // 修改标识为false，显示购物车为空页面
+              selectAllStatus: false,
+              totalPrice: orginalPrice.toFixed(2)              //此时价格为0
+            });
+          } else {                              // 如果不为空
+            this.getTotalPrice();           // 重新计算总价格
+          }
+        }else if(res.cancel) {
+          console.log("用户点了取消")
+        }
+      }
+    })
   },
   chooseBookCart() {
     var that = this;
