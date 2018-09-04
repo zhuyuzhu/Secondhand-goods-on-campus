@@ -1,0 +1,32 @@
+[33me001f33[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mname-of-new-branch[m[33m)[m HEAD@{0}: merge name-of-new-branch: Fast-forward
+[33m7dedae0[m HEAD@{1}: checkout: moving from name-of-new-branch to master
+[33me001f33[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mname-of-new-branch[m[33m)[m HEAD@{2}: checkout: moving from e001f3350966c0d265989082e0e916800bb2c1bf to name-of-new-branch
+[33me001f33[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mname-of-new-branch[m[33m)[m HEAD@{3}: checkout: moving from master to e001f33
+[33m7dedae0[m HEAD@{4}: checkout: moving from e001f3350966c0d265989082e0e916800bb2c1bf to master
+[33me001f33[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mname-of-new-branch[m[33m)[m HEAD@{5}: checkout: moving from master to e001f33
+[33m7dedae0[m HEAD@{6}: checkout: moving from e001f3350966c0d265989082e0e916800bb2c1bf to master
+[33me001f33[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mname-of-new-branch[m[33m)[m HEAD@{7}: commit: finish shoppingCart settlement
+[33m81c3b59[m HEAD@{8}: commit: 2018-09-04-04-Complete the shopping cart function except delete
+[33me3dc42d[m HEAD@{9}: commit: 2018-09-04-03
+[33m2436799[m HEAD@{10}: commit: 2018-09-04-02
+[33m1890e50[m HEAD@{11}: commit: 2018-09-04
+[33m57a0527[m HEAD@{12}: commit: 2018-09-01-05
+[33m3488b06[m HEAD@{13}: commit: 208-09-01-04
+[33m99d9904[m HEAD@{14}: checkout: moving from d1cf4742f390aad4e5dd52843ddb40d23ac6e97f to 99d9904
+[33md1cf474[m HEAD@{15}: checkout: moving from 99d9904f2cbfd32c9e0f7571256431f7fdc8678f to d1cf474
+[33m99d9904[m HEAD@{16}: commit: 2018-09-01-02
+[33m7dedae0[m HEAD@{17}: checkout: moving from d1cf4742f390aad4e5dd52843ddb40d23ac6e97f to 7dedae0
+[33md1cf474[m HEAD@{18}: checkout: moving from master to d1cf474
+[33m7dedae0[m HEAD@{19}: commit: 2018-09-01-01
+[33md1cf474[m HEAD@{20}: commit: 2018-08-31-03
+[33mec9cf8f[m HEAD@{21}: commit: 2018-08-31-02
+[33m77d4079[m HEAD@{22}: commit: 2018-08-31-01
+[33mdd64e19[m HEAD@{23}: commit: 2018-08-30-02
+[33m8de2c02[m HEAD@{24}: commit: 2018-08-30-01
+[33madf5f77[m HEAD@{25}: commit: fifth
+[33m417803d[m HEAD@{26}: commit: fourth
+[33m17d472e[m HEAD@{27}: commit: third
+[33m8374932[m HEAD@{28}: reset: moving to HEAD^
+[33m22b9885[m HEAD@{29}: commit: second
+[33m8374932[m HEAD@{30}: commit: first
+[33m83ce37b[m HEAD@{31}: initial pull
