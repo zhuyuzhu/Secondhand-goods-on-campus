@@ -199,20 +199,4 @@ Page({
   },
 
 
-  //跳转到详情页
-  toBookDetail(e) {
-    var id = e.currentTarget.dataset.id;
-    console.log(id);
-    wx.navigateTo({
-      url: '../../movie-detail/movie-detail?id=' + id,
-    })
-  },
-  toThingDetail(e) {
-    var id = e.currentTarget.dataset.id;
-    console.log(id);
-    wx.navigateTo({
-      url: '../../thing-detail/thing-detail?id=' + id,
-    })
-  }
-
 })
