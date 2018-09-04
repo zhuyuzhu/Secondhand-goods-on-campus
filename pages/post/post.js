@@ -116,7 +116,14 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function() {
-
+    wx.setNavigationBarTitle({
+      title: '校园二手交易'
+    });
+    wx.showNavigationBarLoading(); //在标题栏中显示加载图标
+    setTimeout(function () {
+      wx.stopPullDownRefresh(); //停止加载
+      wx.hideNavigationBarLoading(); //隐藏加载icon
+    }, 2000)
   },
 
   /**

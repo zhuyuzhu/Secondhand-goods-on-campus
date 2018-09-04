@@ -82,7 +82,14 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    wx.setNavigationBarTitle({
+      title: '购物车'
+    });
+    wx.showNavigationBarLoading(); //在标题栏中显示加载图标
+    setTimeout(function () {
+      wx.stopPullDownRefresh(); //停止加载
+      wx.hideNavigationBarLoading(); //隐藏加载icon
+    }, 2000)
   },
 
   /**
@@ -510,17 +517,5 @@ Page({
     that.getThingCartList()
 
   },
-  judgeThingAllStatus: function () {
-    var that = this;
-    var selectAllStatus = that.data.selectAllStatus;
-    let str = true;  //用str与每一项进行状态判断
-    let thingCarts = that.data.thingCarts;  // 获取购物车列表
-    for (var i = 0; i < thingCarts.length; i++) {
-      str = str && thingCarts[i].selected;           //用str与每一项进行状态判断
-      console.log(str);
-    }
-    that.setData({
-      selectAllStatus: str
-    })
-  }
+ 
 })

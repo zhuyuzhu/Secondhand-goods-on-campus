@@ -82,7 +82,15 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    // 动态设置导航条标题
+    wx.setNavigationBarTitle({
+      title: '购物车'
+    });
+    wx.showNavigationBarLoading(); //在标题栏中显示加载图标
+    setTimeout(function(){
+      wx.stopPullDownRefresh(); //停止加载
+      wx.hideNavigationBarLoading(); //隐藏加载icon
+    },2000)
   },
 
   /**
@@ -482,7 +490,6 @@ getBookCartList(){
     let selectAllStatus = that.data.selectAllStatus; //是否已经全选
     let str = true;  //用str与每一项进行状态判断
     let carts = that.data.carts;  
-    var bookId = that.data.bookId;
     for (var i = 0; i < carts.length; i++) {
       str = str && carts[i].selected;           //用str与每一项进行状态判断
     }
@@ -490,9 +497,8 @@ getBookCartList(){
     that.setData({
       selectBook: true,
       selectThing: false, 
-      bookId: '',
     })
-    that.getBookCartList();
+   
   },
   chooseThingCart() {
     var that = this;
@@ -510,17 +516,34 @@ getBookCartList(){
     that.getThingCartList()
     
   },
-  judgeThingAllStatus: function(){
-    var that = this;
-    var selectAllStatus = that.data.selectAllStatus;
-    let str = true;  //用str与每一项进行状态判断
-    let thingCarts = that.data.thingCarts;  // 获取购物车列表
-    for (var i = 0; i < thingCarts.length; i++) {
-      str = str && thingCarts[i].selected;           //用str与每一项进行状态判断
-      console.log(str);
-    }
-    that.setData({
-      selectAllStatus: str
+  toBuy(){
+    var totalPrice = this.data.totalPrice;
+    var thingCarts = this.data.thingCarts;
+    var bookCarts = this.data.carts;
+    var bookId = this.data.bookId;
+    var bookCart = [], thingCart = [];
+    bookCarts.forEach(item=>{
+      if (item.selected){
+        bookCart.push(item);
+      }
     })
+    thingCarts.forEach(item=>{
+      if (item.selected){
+        thingCart.push(item);
+      }
+    })
+    let shoppingCartList = {thingCart, bookCart};
+    
+    console.log(bookCart);
+    if(totalPrice === '0.00'){
+     console.log(totalPrice);
+
+    }else {
+      console.log(shoppingCartList);
+      wx.navigateTo({
+        url: '../settlement/settlement?bookCart='+bookCart,
+      })
+    }
+
   }
 })

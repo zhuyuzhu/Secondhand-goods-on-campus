@@ -24,80 +24,101 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    
+  onLoad: function(options) {
+
     var typeId = options.typeId;
     if (typeId === 'inThearters') {
-      this.setData({ showInThearter: false, showComingSoon: true })
-    } else { 
-      this.setData({ showInThearter: true, showComingSoon: false });
+      this.setData({
+        showInThearter: false,
+        showComingSoon: true
+      })
+    } else {
+      this.setData({
+        showInThearter: true,
+        showComingSoon: false
+      });
     }
-    this.getMovieListData('inThearters');//根据唯一标示获取对应的数据
+    this.getMovieListData('inThearters'); //根据唯一标示获取对应的数据
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
     var isShow = this.data.isShow;
     this.setData({
       isShow: false
     })
     console.log(11)
+    // 动态设置导航条标题
+    wx.setNavigationBarTitle({
+      title: '我的订单'
+    });
+    wx.showNavigationBarLoading(); //在标题栏中显示加载图标
+    setTimeout(function() {
+      wx.stopPullDownRefresh(); //停止加载
+      wx.hideNavigationBarLoading(); //隐藏加载icon
+    }, 2000)
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   },
   selectTap(event) {
 
     var tabId = event.currentTarget.dataset.tabId;
-    console.log(tabId);//comingSoon inThearters
+    console.log(tabId); //comingSoon inThearters
     //注意此处的tabId是text标签中（正在上映、即将上映）中的data-tab-id的值
     //这里最好还是要换一个标示，不然跟上面的标示重名，容易混淆
     if (tabId === 'inThearters') {
-      this.setData({ showInThearter: true, showComingSoon: false });
+      this.setData({
+        showInThearter: true,
+        showComingSoon: false
+      });
 
     } else {
-      this.setData({ showInThearter: false, showComingSoon: true });
+      this.setData({
+        showInThearter: false,
+        showComingSoon: true
+      });
 
     }
     //在两个值切换的时候，如果没有数据再进行加载
@@ -145,7 +166,9 @@ Page({
     wx.request({
       url: URL,
       method: 'POST',
-      header: { 'content-type': 'application/x-www-form-urlencoded ' },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded '
+      },
       data: {
         lastId: that.data[mark]
       },
@@ -160,12 +183,14 @@ Page({
         if (mark == 'lastbookId') {
           console.log(data.length); // 计算每组数据的长度。
           that.setData({
-            bookLength: data.length  //每次获取5组值
+            bookLength: data.length //每次获取5组值
           })
           console.log(1);
           console.log(res.data.data);
           that.setData({
-            [typeId]: { messages },
+            [typeId]: {
+              messages
+            },
             lastbookId: data[data.length - 1].bookid //将这组数据中的最后一项的id赋值给lastbookId;
           })
         } else if (mark == 'lastthingId') {
@@ -175,7 +200,9 @@ Page({
           })
           console.log(res.data.data);
           that.setData({
-            [typeId]: { messages },
+            [typeId]: {
+              messages
+            },
             lastthingId: res.data.data[data.length - 1].goodid
           })
         }

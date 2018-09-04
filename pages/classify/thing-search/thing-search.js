@@ -51,7 +51,14 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    wx.setNavigationBarTitle({
+      title: '搜索物品'
+    });
+    wx.showNavigationBarLoading(); //在标题栏中显示加载图标
+    setTimeout(function () {
+      wx.stopPullDownRefresh(); //停止加载
+      wx.hideNavigationBarLoading(); //隐藏加载icon
+    }, 2000)
   },
 
   /**
@@ -84,8 +91,7 @@ Page({
     that.setData({
       keyWord: value
     })
-    // var url = app.globalData.doubanBase + app.globalData.ResourcesURL + value + "&&start=0&&count=10"; 
-
+  
     var url = app.globalData.huanbaoBase + 'searchthing.php';
     //微信请求方式的写法
 
@@ -106,6 +112,7 @@ Page({
     })
   },
   handleData(data) {
+    console.log(data);
     var resultList = []
     data.forEach(item => {
       //注意： push可以是具体的对象
@@ -123,7 +130,6 @@ Page({
   bindToSearchList(e) {
     console.log(e.currentTarget.dataset.value);
     var that = this;
-    var url = app.globalData.huanbaoBase + 'searchbook.php';
     var value = e.currentTarget.dataset.value;
     var keyWord = value;
     wx.navigateTo({

@@ -1,6 +1,5 @@
 {
   "pages": [
-   
     "pages/shouye/shouye",
     "pages/shoppingCart/shoppingCart",
     "pages/my/my",
@@ -36,7 +35,8 @@
     "pages/sonShouye/headline/headline",
     "pages/classify/jobDetail/jobDetail",
     "pages/thing-detail/thing-detail",
-    "pages/search-thing-result/search-thing-result"
+    "pages/search-thing-result/search-thing-result",
+    "pages/settlement/settlement"
   ],
   "window": {
     "navigationBarBackgroundColor": "#1E68C9",

@@ -50,7 +50,14 @@ Page({
   },
 
   onPullDownRefresh: function () {
-    this.onShow();
+    wx.setNavigationBarTitle({
+      title: '我的发布'
+    });
+    wx.showNavigationBarLoading(); //在标题栏中显示加载图标
+    setTimeout(function () {
+      wx.stopPullDownRefresh(); //停止加载
+      wx.hideNavigationBarLoading(); //隐藏加载icon
+    }, 2000)
 
   },
 

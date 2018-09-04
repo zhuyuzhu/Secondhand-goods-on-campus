@@ -95,7 +95,16 @@ Page({
   onUnload: function() {
 
   },
-
+  onPullDownRefresh(){
+    wx.setNavigationBarTitle({
+      title: '我的信息'
+    });
+    wx.showNavigationBarLoading(); //在标题栏中显示加载图标
+    setTimeout(function () {
+      wx.stopPullDownRefresh(); //停止加载
+      wx.hideNavigationBarLoading(); //隐藏加载icon
+    }, 2000)
+  },
   bindGetUserInfo: function(e) {
     var that = this;
     var nickName = that.data.userInfo.nickName;

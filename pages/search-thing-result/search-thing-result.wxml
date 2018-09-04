@@ -8,7 +8,8 @@
             <text class='name'>{{item.gname}}</text>
             <text class='desc'>校区：{{item.gcollege}}</text>
             <text class='desc'>成色：{{item.gstatus}}</text>
-            <text class='price'>￥{{item.bprice}}</text>
+            <text class='desc'>发布者：{{item.usersname}}</text>
+            <text class='price'>￥{{item.gprice}}</text>
         </view>
       </view>
     </view>

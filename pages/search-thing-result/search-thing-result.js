@@ -61,7 +61,14 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    wx.setNavigationBarTitle({
+      title: '搜索结果'
+    });
+    wx.showNavigationBarLoading(); //在标题栏中显示加载图标
+    setTimeout(function () {
+      wx.stopPullDownRefresh(); //停止加载
+      wx.hideNavigationBarLoading(); //隐藏加载icon
+    }, 2000)
   },
 
   /**
@@ -85,8 +92,6 @@ Page({
     var resultList = that.data.resultList;
     var thingSearchLength = that.data.thingSearchLength;
     var isThingSearchShow = that.data.isThingSearchShow;
-    console.log(keyWord, thingLastId);
-
     var url = app.globalData.huanbaoBase + 'showthingsbykeyword.php';
     //微信请求方式的写法
     wx.showToast({
@@ -94,12 +99,13 @@ Page({
       icon: 'loading',
       duration: 1000,
     })
+    console.log(keyWord, thingLastId);
     wx.request({
       url,
       method: 'POST',
       data: {
-        keyWord: keyWord,
         lastId: thingLastId,
+        keyword: keyWord,  
       },
       header: { 'content-type': 'application/x-www-form-urlencoded ' },
       success(res) {
@@ -113,7 +119,6 @@ Page({
           })
           return
         }
-
         that.handleData(res.data.data);
       },
       fail(err) {
@@ -147,8 +152,9 @@ Page({
   },
   toThingDetail(e) {
     var id = e.currentTarget.dataset.id;
+    console.log(id);
     wx.navigateTo({
-      url: '../movie-detail/movie-detail?id=' + id, //跳转到书本详情页
+      url: '../thing-detail/thing-detail?id=' + id, //跳转到书本详情页
     })
   }
 })

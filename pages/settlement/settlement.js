@@ -1,4 +1,4 @@
-// pages/my/myorder/myorder.js
+// pages/settlement/settlement.js
 Page({
 
   /**
@@ -12,7 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+      console.log(options);
   },
 
   /**
@@ -47,14 +47,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    wx.setNavigationBarTitle({
-      title: '我的订单'
-    });
-    wx.showNavigationBarLoading(); //在标题栏中显示加载图标
-    setTimeout(function () {
-      wx.stopPullDownRefresh(); //停止加载
-      wx.hideNavigationBarLoading(); //隐藏加载icon
-    }, 2000)
+  
   },
 
   /**
