@@ -30,6 +30,9 @@
   padding: 30rpx;
   border-bottom: 3rpx solid #e6e6e6;
 }
+.icon-wrapper {
+  line-height: 260rpx;
+}
  .cart-icon {
     display: inline-block;
     margin: auto 10rpx;

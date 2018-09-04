@@ -65,15 +65,16 @@ Page({
     } catch (e) {
       console.log(0);
     }
-    wx.getStorage({
-      key: 'nickName',
-      success: function (res) {
-        console.log(res.data)
+     try {
+      var value = wx.getStorageSync('nickName')
+      if (value) {
         that.setData({
-          nickName: nickName
+          [nickName]: value
         })
       }
-    })
+    } catch (e) {
+      // Do something when catch error
+    }
     console.log(studentId);//此处是获取不到值的
     wx.request({
       url,
@@ -129,15 +130,16 @@ Page({
       console.log(0);
     }
     console.log(studentId);
-    wx.getStorage({
-      key: 'nickName',
-      success: function (res) {
-        console.log(res.data)
+     try {
+      var value = wx.getStorageSync('nickName')
+      if (value) {
         that.setData({
-          nickName: nickName
+          nickName: value
         })
       }
-    })
+    } catch (e) {
+      // Do something when catch error
+    }
   },
 
   /**
@@ -301,7 +303,7 @@ Page({
     var studentId = that.data.studentId;
     var nickName = that.data.nickName;
     var url = app.globalData.huanbaoBase + 'buybook.php';
-
+    console.log(nickName)
     console.log("预约购买")
     wx.request({
       url, //仅为示例，并非真实的接口地址

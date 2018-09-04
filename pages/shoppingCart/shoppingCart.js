@@ -324,9 +324,7 @@ getBookCartList(){
             })
           }
         },
-
       })
-
     }
   }else {
     selectAllStatus = !selectAllStatus;
@@ -365,7 +363,7 @@ getBookCartList(){
   //删除商品
   deleteList(e) {
     const index = e.currentTarget.dataset.index;
-    var selectAllStatus = this.data.selectAllStatus
+    var selectAllStatus = this.data.selectAllStatus;
     let carts = this.data.carts;
     let totalPrice = this.data.totalPrice;
     carts.splice(index, 1);              // 删除购物车列表里这个商品
@@ -462,6 +460,7 @@ getBookCartList(){
     let selectAllStatus = that.data.selectAllStatus; //是否已经全选
     let str = true;  //用str与每一项进行状态判断
     let carts = that.data.carts;  
+    var bookId = that.data.bookId;
     for (var i = 0; i < carts.length; i++) {
       str = str && carts[i].selected;           //用str与每一项进行状态判断
     }
@@ -469,14 +468,16 @@ getBookCartList(){
     that.setData({
       selectBook: true,
       selectThing: false, 
+      bookId: '',
     })
- 
+    that.getBookCartList();
   },
   chooseThingCart() {
     var that = this;
     var selectThing = that.data.selectThing;
     var selectBook = that.data.selectBook;
     var selectAllStatus = that.data.selectAllStatus;
+    
     that.setData({
       selectBook: false,
       selectThing: true,

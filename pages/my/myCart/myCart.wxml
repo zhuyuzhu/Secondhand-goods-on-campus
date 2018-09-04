@@ -1,35 +1,69 @@
 <!--pages/shoppingCart/shoppingCart.wxml-->
-<view class="cart-box">
+<view class='box'>
+  <view class='wrapper'>
+    <view class="tab-content {{selectBook? 'select': 'noSelect'}}" bindtap='chooseBookCart'>书本</view>
+    <view class="tab-content {{selectThing? 'select': 'noSelect'}}" bindtap='chooseThingCart'>物品</view>
+
+  </view>
+</view>
+<!-- 书本 -->
+<view class="cart-box" wx:if="{{selectBook}}">
   <!-- wx:for 渲染购物车列表 -->
   <view wx:for="{{carts}}" wx:key="{{carts}}" class='cart-goods'>
-
     <!-- wx:if 是否选择显示不同图标 -->
-    <icon wx:if="{{item.selected}}" class='cart-icon' type="success" color="red" bindtap="selectList" data-index="{{index}}" />
-    <icon wx:else type="circle" class='cart-icon' bindtap="selectList" data-index="{{index}}" />
-
-    <!-- 点击商品图片可跳转到商品详情 -->
-    <navigator url="../details/details?id={{item.id}}" class='cart-img'>
-      <image class="cart-thumb" src="{{item.image}}"></image>
-
+ <view class='icon-wrapper' bindtap="selectList" data-index="{{index}}">
+    <icon wx:if="{{item.selected}}" class='cart-icon' type="success" color="red"  />
+    <icon wx:else type="circle" class='cart-icon'  />
+    </view>
+    <view  class='cart-img'>
+      <image class="cart-thumb" src="{{item.picture}}"></image>
       <view class='cart-message'>
-        <text class='name'>书名：{{item.title}}</text>
+        <text class='name'>书名：{{item.bname}}</text>
         <text class='author'>作者：{{item.author}}</text>
         <text class='press'>出版社：{{item.press}}</text>
-        <text class='price'>价格：￥{{0 || item.price}}</text>
+        <text class='price'>价格：￥{{item.bprice}}</text>
       </view>
-    </navigator>
-
+    </view>
+    <!-- 点击商品图片可跳转到商品详情 -->
+    
     <!-- 删除按钮 -->
     <text bindtap="deleteList" data-index="{{index}}" class='delete'> × </text>
   </view>
+  <view wx:if="{{isMyCartShow}}" class='bottom'>没有书本啦~_~</view>
 </view>
+<!-- 物品 -->
+<view class="cart-box" wx:if="{{selectThing}}">
+  <!-- wx:for 渲染购物车列表 -->
+  <view wx:for="{{thingCarts}}" wx:key="{{thingCarts}}" class='cart-goods'>
+    <!-- wx:if 是否选择显示不同图标 -->
+     <view class='icon-wrapper' bindtap="selectListThing" data-index="{{index}}">
+    <icon wx:if="{{item.selected}}" class='cart-icon' type="success" color="red"  />
+    <icon wx:else type="circle" class='cart-icon'  />
+    </view>
 
+    <view  class='cart-img'>
+      <image class="cart-thumb" src="{{item.gpicture}}"></image>
+      <view class='cart-message'>
+        <text class="name">{{item.gname}}</text>
+        <text class="author">校区：{{item.gcollege}}</text>
+        <text class='author'>成色：{{item.gstatus}}</text>
+        <text class='author'>发布者：{{item.usersname}}</text>
+        <text class='price'>￥{{item.gprice}}</text>
+      </view>
+    </view>
+    <!-- 点击商品图片可跳转到商品详情 -->
+    
+    <!-- 删除按钮 -->
+    <text bindtap="deleteListThing" data-index="{{index}}" class='delete'> × </text>
+  </view>
+  <view wx:if="{{isThingCartShow}}" class='bottom'>没有物品啦~_~</view>
+</view>
 <!-- 底部操作栏 -->
 <view class='cart-bottom'>
   <!-- wx:if 是否全选显示不同图标 -->
   <icon wx:if="{{selectAllStatus}}" class='cart-iconAll' type="success_circle" color="red" bindtap="selectAll" />
   <icon wx:else type="circle" class='cart-iconAll' color="#ff7100" bindtap="selectAll" />
-  <text class='cart-allSelect'>全选</text>
+  <text class='cart-allSelect' bindtap="selectAll">全选</text>
   <!-- 总价 -->
   <text class='cart-allPrice'>合计:</text>
   <text class='allPrice'>￥{{totalPrice}}</text>

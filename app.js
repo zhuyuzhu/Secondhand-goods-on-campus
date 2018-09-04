@@ -158,8 +158,8 @@ App({
   // 获取电影的数据URL
   globalData: {
     userInfo: null,
-    huanbaoBase: 'https://www.hukebme.com/',  //唤宝的网址
-    // huanbaoBase: 'http://192.168.0.111/',
+    // huanbaoBase: 'https://www.hukebme.com/',  //唤宝的网址
+    huanbaoBase: 'http://192.168.0.111/',
     // doubanBase: 'https://douban.uieee.com',
     //huanbaoBase: 'http://localhost/',
     ResourcesURL: '/v2/movie/search?q=',

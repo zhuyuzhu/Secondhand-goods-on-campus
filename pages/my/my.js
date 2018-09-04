@@ -59,19 +59,22 @@ Page({
       }
     })
     //get缓存值用户名字，并设置
-   wx.getStorage({
-     key: 'nickName',
-     success: function(res) {
-       that.setData({
-         [nickName]: res.data
-       })
-     },
-   })
+    try {
+      var value = wx.getStorageSync('nickName')
+      console.log(value);
+      if (value) {
+        that.setData({
+          [nickName]: value
+        })
+      }
+    } catch (e) {
+      // Do something when catch error
+    }
+
    //get缓存值用户头像，并设置
    wx.getStorage({
      key: 'avatarUrl',
-     success: function(res) {
-       
+     success: function(res) {  
        that.setData({
         [avatarUrl]: res.data
        })
@@ -108,11 +111,11 @@ Page({
       that.setData({
         avatarUrl : userInfo.avatarUrl
       })
+      try {//同步设置nickName
+        wx.setStorageSync('nickName', userInfo.nickName)
+      } catch (e) {
+      }
       
-      wx.setStorage({
-        key: 'nickName',
-        data: userInfo.nickName,
-      })
       wx.setStorage({
         key: 'avatarUrl',
         data: userInfo.avatarUrl,
@@ -141,13 +144,13 @@ Page({
   },
   bindClear: function (e) {
     var that = this;
-    var nickName = 'that.data.userInfo.nickName';
-    var avatarUrl = 'that.data.userInfo.avatarUrl';
-    console.log(e);
-    wx.setStorage({
-      key: 'nickName',
-      data: '个人信息',
-    })
+    var nickName = 'userInfo.nickName';
+    var avatarUrl = 'userInfo.avatarUrl';
+   
+    try {//同步设置nickName
+      wx.setStorageSync('nickName', '')
+    } catch (e) {
+    }
     wx.setStorage({
       key: 'studentId',
       data: '',
