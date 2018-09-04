@@ -45,8 +45,21 @@ Page({
     var thingDescribe = 'detailData.thingDescribe';
     var thingId = that.data.thingId;
     var studentId = that.data.studentId;
+    var nickName = that.data.nickName;
     var poster = 'detailData.poster';
     var url = app.globalData.huanbaoBase + 'getbythingid.php';
+    
+    try {
+      var value = wx.getStorageSync('nickName')
+      if (value) {
+        that.setData({
+          [nickName]: value
+        })
+      }
+    } catch (e) {
+      // Do something when catch error
+    }
+  
     try {
       var value = wx.getStorageSync('studentIdSync')
       if (value) {
@@ -100,6 +113,7 @@ Page({
   onShow: function() {
     var that = this;
     var studentId = that.data.studentId; //学生id
+    var nickName = that.data.nickName;
     try { 
       var value = wx.getStorageSync('studentIdSync')
       if (value) {
@@ -110,6 +124,16 @@ Page({
       }
     } catch (e) {
       console.log(0);
+    }
+    try {
+      var value = wx.getStorageSync('nickName')
+      if (value) {
+        that.setData({
+          nickName: value
+        })
+      }
+    } catch (e) {
+      // Do something when catch error
     }
     console.log(studentId);
   },
@@ -216,6 +240,93 @@ Page({
         }
       })
     }
+  },
+  nowBuy() {
+    var that = this;
+    var thingId = this.data.thingId;
+    var theCover = that.data.theCover;
+    var thePay = that.data.thePay;
+    that.setData({
+      theCover: true,
+      thePay: true,
+    })
+  },
+  deletePay() {
+    var that = this;
+    var theCover = that.data.theCover;
+    var thePay = that.data.thePay;
+    that.setData({
+      theCover: false,
+      thePay: false,
+    })
+  },
+  buy() {
+    var that = this;
+    var thingId = this.data.thingId;
+    var url = app.globalData.huanbaoBase + 'tempgoods.php';
+    wx.request({
+      url, //仅为示例，并非真实的接口地址
+      method: 'POST',
+      data: {
+        thingId: thingId
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data);
+        if (res.data === 1) {
+          that.ReservationPayment();//预约付款
+        } else {
+          wx.showModal({
+            title: '提示',
+            content: '该商品已下架',
+            success: function (res) {
+              if (res.confirm) {
+                console.log('用户点击确定')
+              } else if (res.cancel) {
+                console.log('用户点击取消')
+              }
+            }
+          })
+        }
+      }
+    })
+  },
+  ReservationPayment() {
+    var that = this;
+    var thingId = that.data.thingId;
+    var studentId = that.data.studentId;
+    var nickName = that.data.nickName;
+    var url = app.globalData.huanbaoBase + 'buything.php';
+    console.log(nickName)
+    console.log("预约购买")
+    wx.request({
+      url, //仅为示例，并非真实的接口地址
+      method: 'POST',
+      data: {
+        thingId: thingId,
+        buyStatus: 1,
+        buyStudentID: studentId,
+        buyUsername: nickName,
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success: function (res) {
+        console.log(res);
+        wx.showToast({
+          title: '预购成功',
+          icon: 'success',
+          duration: 1500
+        })
+        setTimeout(function () {
+          wx.switchTab({
+            url: '../order/order'
+          })
+        }, 1500)
 
+      }
+    })
   }
 })

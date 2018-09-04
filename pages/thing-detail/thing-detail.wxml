@@ -1,4 +1,5 @@
 <!--pages/thing-detail/thing-detail.wxml-->
+<view class="{{theCover? 'coverFadeIn' : 'coverFadeOut'}}"></view>
 <view class='detail'>
   <image src='{{detailData.thingImage}}' class='detail-image'>
   </image>
@@ -20,6 +21,22 @@
   <view class='detail-bottom'>
     <view class='addCart' bindtap='addMyCart'>加入购物车</view>
     <view class='buyNow' bindtap='nowBuy'>立即购买</view>
+  </view>
+   <view class="{{thePay? 'paySlideUp' : 'paySlideDown'}}">
+    <view class='thing-detail'>
+      <image src='{{detailData.thingImage}}' class='pay-img'></image>
+      <view class='thing-messege'>
+        <view class='thingName'>{{detailData.thingName}}</view>
+        <view class='thingPoster'>发布者：{{detailData.poster}}</view>
+        <view class='thingPrice'>价格：￥{{detailData.thingPrice}}</view>
+      </view>
+      <text bindtap="deletePay" data-index="{{index}}" class='delete'> × </text>
+    </view>
+    <view class='content'>
+      <view class='prompt'>提示：预约购买成功后，您将获得卖家的联系方式，请及时与卖家取得联系，进行线下当面付款交易。</view>
+      <view class='attention'>注意：该产品在您预约购买后，会自动下架，您是该产品的唯一买家。</view>
+    </view>
+    <view class='thing-buy' bindtap='buy'>预约购买</view>
   </view>
 </view>
 
