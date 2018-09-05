@@ -3,21 +3,21 @@
 ## 首页
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/homePage.jpg" width="375" alt="首页"/>
 
-### 定位
+#### 定位
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/location.jpg" width="375" alt="首页"/>
 
-### 天气
+#### 天气
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/weather.jpg" width="375" alt="首页"/>
 
-### 轮播图
+#### 轮播图
 
-### 搜索框
+#### 搜索框
 
-### 滚动条
+#### 滚动条
 
-### 四个分类功能
+#### 四个分类功能
 
-### 今日推荐
+#### 今日推荐
 
 ## 购物车
 <img src="https://github.com/zhuyuzhu/images/blob/master/pictures/shoppingCart.jpg" width="375" alt="购物车"/>
