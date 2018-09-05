@@ -1,2 +1,2 @@
 # Secondhand-goods-on-campus
-2018 summer vacation to stay in school to do the project
+校园二手交易微信小程序实现的功能：定位大学，当地天气，轮播图，
