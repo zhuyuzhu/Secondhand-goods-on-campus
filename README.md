@@ -3,7 +3,7 @@
 ## 首页
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/homePage.jpg" width="375" alt="首页"/>
 ## 购物车
-<img src="https://github.com/zhuyuzhu/images/blob/master/pictures/shoppingCart.jpg" width="375" alt="图片描述文字"/>
+<img src="https://github.com/zhuyuzhu/images/blob/master/pictures/shoppingCart.jpg" width="375" alt="购物车"/>
 ## 发布
 <img src="https://github.com/zhuyuzhu/images/blob/master/pictures/release.jpg" width="375" alt="图片描述文字"/>
 ## 订单
