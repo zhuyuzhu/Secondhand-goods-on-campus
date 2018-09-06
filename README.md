@@ -5,14 +5,16 @@
 
 #### 定位
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/location.jpg" width="375" alt="定位"/>
-11111111111111111111111
-<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/weather.jpg" width="375" alt="天气"/>
 
 #### 天气
 天气功能调用的是百度的接口，，，
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/weather.jpg" width="375" alt="天气"/>
 
+
 #### 轮播图
+轮播图直接用微信小程序的组件，
+<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper1.jpg" width="375" alt="轮播图wxml"/>
+<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper2.jpg" width="375" alt="轮播图js"/>
 
 #### 搜索框
 
