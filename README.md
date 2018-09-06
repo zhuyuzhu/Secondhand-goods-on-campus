@@ -13,6 +13,7 @@
 
 #### 轮播图
 轮播图直接用微信小程序的组件，
+
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper1.jpg" width="375" alt="轮播图wxml"/>
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper2.jpg" width="375" alt="轮播图js"/>
 
