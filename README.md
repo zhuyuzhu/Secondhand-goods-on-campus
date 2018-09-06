@@ -4,11 +4,12 @@
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/homePage.jpg" width="375" alt="首页"/>
 
 #### 定位
-<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/location.jpg" width="375" alt="首页"/>
+<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/location.jpg" width="375" alt="定位"/>
+<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/weather.jpg" width="375" alt="天气"/>
 
 #### 天气
 天气功能调用的是百度的接口，，，
-<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/weather.jpg" width="375" alt="首页"/>
+<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/weather.jpg" width="375" alt="天气"/>
 
 #### 轮播图
 
