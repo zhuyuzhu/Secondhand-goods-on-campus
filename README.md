@@ -13,7 +13,7 @@
 
 
 #### 轮播图
-轮播图直接用微信小程序的组件，&gt;swiper>设置轮播图属性——> <block>循环遍历每一项——> <swiper-item>轮播每一项——> <image>每一项的图片
+轮播图直接用微信小程序的组件，&lt;swiper&gt;设置轮播图属性——> &lt;blockgt;循环遍历每一项——> &lt;swiper-itemgt;轮播每一项——> &lt;imagegt;每一项的图片
 
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper1.jpg" width="375" alt="轮播图wxml"/>
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper2.jpg" width="375" alt="轮播图js"/>
