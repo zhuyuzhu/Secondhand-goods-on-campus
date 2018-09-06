@@ -20,7 +20,7 @@
 
 #### 搜索框
 首页的所搜框用的是一张图片，当然这样的搜索框，微信小程序是有组件的,
-[微信小程序的搜索icon组件](https://developers.weixin.qq.com/miniprogram/dev/component/icon.html){:target="_blank"}
+[微信小程序的搜索icon组件](https://developers.weixin.qq.com/miniprogram/dev/component/icon.html?_blank)
 #### 滚动条
 
 #### 四个分类功能
