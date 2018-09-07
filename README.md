@@ -24,19 +24,22 @@
 #### 搜索框
 首页的所搜框用的是一张图片，当然这样的搜索框，微信小程序是有组件的,
 [微信小程序的icon组件](https://developers.weixin.qq.com/miniprogram/dev/component/icon.html)
+<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/search.jpg" width="300" alt="搜索框图片"/>
 
 #### 滚动条
 我采用引入模板的方式，将这个功能写好后，引入到首页，同样用的&lt;swiper&gt;标签。![详情]()
 
-<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper-y.jpg" width="300" alt="轮播图js"/>
+<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper-y.jpg" width="300" alt="校园头条"/>
 下面是代码截图：
 
-<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper-y1.jpg" width="800" alt="轮播图js"/>
+<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper-y1.jpg" width="800" alt="校园头条wxml"/>
 
 
 #### 四个分类功能
+<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/classify.jpg" width="300" alt="四个分类"/>
 
 #### 今日推荐
+<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/recommend.jpg" width="300" alt="今日推荐"/>
 
 ## 购物车
 <img src="https://github.com/zhuyuzhu/images/blob/master/pictures/shoppingCart.jpg" width="300" alt="购物车"/>
