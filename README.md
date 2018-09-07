@@ -15,7 +15,7 @@
 #### 轮播图
 轮播图直接用微信小程序的组件，&lt;swiper&gt;设置轮播图属性——> &lt;block&gt;循环遍历每一项——> &lt;swiper-item&gt;轮播每一项——> &lt;image&gt;每一项的图片
 
-<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper1.jpg" width="700" alt="轮播图wxml"/>
+<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper1.jpg" width="900" alt="轮播图wxml"/>
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper2.jpg" width="300" alt="轮播图js"/>
 
 #### 搜索框
