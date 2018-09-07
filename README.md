@@ -15,6 +15,9 @@
 #### 轮播图
 轮播图直接用微信小程序的组件，&lt;swiper&gt;设置轮播图属性——> &lt;block&gt;循环遍历每一项——> &lt;swiper-item&gt;轮播每一项——> &lt;image&gt;每一项的图片
 
+<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper.jpg" width="300" alt="轮播图js"/>
+下面是代码截图：
+
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper1.jpg" width="900" alt="轮播图wxml"/>
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper2.jpg" width="300" alt="轮播图js"/>
 
@@ -23,7 +26,12 @@
 [微信小程序的icon组件](https://developers.weixin.qq.com/miniprogram/dev/component/icon.html)
 
 #### 滚动条
-我采用引入模板的方式，将这个功能写好后，引入到首页。
+我采用引入模板的方式，将这个功能写好后，引入到首页，同样用的&lt;swiper&gt;标签。![详情]()
+
+<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper-y.jpg" width="300" alt="轮播图js"/>
+下面是代码截图：
+
+<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper-y1.jpg" width="800" alt="轮播图js"/>
 
 
 #### 四个分类功能
