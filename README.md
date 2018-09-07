@@ -10,7 +10,7 @@
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/location.jpg" width="300" alt="定位"/>
 
 #### 天气
-天气功能调用的是百度的接口，，，
+天气功能调用的是百度的接口，在百度地图官网给的代码实例里面除了位置功能，还有当地天气的数据，可以直接拿来使用。
 
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/weather.jpg" width="300" alt="天气"/>
 
@@ -18,7 +18,7 @@
 #### 轮播图
 轮播图直接用微信小程序的组件，&lt;swiper&gt;设置轮播图属性——> &lt;block&gt;循环遍历每一项——> &lt;swiper-item&gt;轮播每一项——> &lt;image&gt;每一项的图片
 
-<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper.jpg" width="300" alt="轮播图js"/>
+<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper.jpg" width="300" alt="轮播效果图"/>
 下面是代码截图：
 
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper1.jpg" width="900" alt="轮播图wxml"/>
@@ -39,9 +39,11 @@
 
 
 #### 四个分类功能
+分类功能实现的也比较简单，没有什么技术性的东西，或许wxss样式对你有所帮助。
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/classify.jpg" width="300" alt="四个分类"/>
 
 #### 今日推荐
+今日推荐功能使用了[微信小程序的scroll-view](https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html)，要注意的是，推荐好书和推荐好物在同一个页面，那么当点击“更多”的时候，要跳转到相应内容上。
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/recommend.jpg" width="300" alt="今日推荐"/>
 
 ## 购物车
