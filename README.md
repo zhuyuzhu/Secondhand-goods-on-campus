@@ -1,7 +1,7 @@
 # 校园二手交易微信小程序
 校园二手交易微信小程序实现的功能：定位大学，当地天气，轮播图，推荐列表，购物车，发布功能，订单，身份验证等
 ## 首页
-<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/homePage.jpg" width="375" alt="首页"/>
+<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/homePage.jpg" width="300" alt="首页"/>
 
 #### 定位
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/location.jpg" width="375" alt="定位"/>
