@@ -13,16 +13,18 @@
 
 
 #### 轮播图
-轮播图直接用微信小程序的组件，&lt;swiper&gt;设置轮播图属性——> &lt;blockg&t;循环遍历每一项——> &lt;swiper-item&gt;轮播每一项——> &lt;image&gt;每一项的图片
+轮播图直接用微信小程序的组件，&lt;swiper&gt;设置轮播图属性——> &lt;block&gt;循环遍历每一项——> &lt;swiper-item&gt;轮播每一项——> &lt;image&gt;每一项的图片
 
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper1.jpg" width="375" alt="轮播图wxml"/>
-<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper2.jpg" width="375" alt="轮播图js"/>
+<img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper2.jpg" width="300" alt="轮播图js"/>
 
 #### 搜索框
 首页的所搜框用的是一张图片，当然这样的搜索框，微信小程序是有组件的,
 [微信小程序的icon组件](https://developers.weixin.qq.com/miniprogram/dev/component/icon.html)
 
 #### 滚动条
+我才用引入模板的方式，将这个功能写好后，引入到首页。
+
 
 #### 四个分类功能
 
