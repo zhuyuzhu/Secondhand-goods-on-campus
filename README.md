@@ -30,7 +30,7 @@
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/search-book.jpg" width="300" alt="搜索框图片"/>
 
 #### 滚动条
-我采用引入模板的方式，将这个功能写好后，引入到首页，同样用的&lt;swiper&gt;标签。![详情]()
+我采用引入模板的方式，将这个功能写好后，引入到首页，同样用的&lt;swiper&gt;标签。[详情]()
 
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper-y.jpg" width="300" alt="校园头条"/>
 下面是代码截图：
@@ -44,6 +44,7 @@
 
 #### 今日推荐
 今日推荐功能使用了[微信小程序的scroll-view](https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html)，要注意的是，推荐好书和推荐好物在同一个页面，那么当点击“更多”的时候，要跳转到相应内容上。
+
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/recommend.jpg" width="300" alt="今日推荐"/>
 
 ## 购物车
