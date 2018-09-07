@@ -2,10 +2,11 @@
 校园二手交易微信小程序实现的功能：定位大学，当地天气，轮播图，推荐列表，购物车，发布功能，订单，身份验证等
 ## 首页
 首页实现了一些简单的功能，而且界面的设计也不是美观，设计的比较粗糙，后续会完善的功能是：用户下滑加载更多的内容，内容也会更加丰富。
+
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/homePage.jpg" width="300" alt="首页"/>
 
 #### 定位
-定位功能调用的是百度的接口，本来是想腾讯地图的，但是自己在使用的过程中，出现了一些错误（后续会完善腾讯地图的使用），导致调用接口失败了，然后才用的![百度地图web端的api](http://lbsyun.baidu.com/index.php?title=jspopular)，而且官方给了代码实例，我们稍作修改即可使用。
+定位功能调用的是百度的接口，本来是想腾讯地图的，但是自己在使用的过程中，出现了一些错误（后续会完善腾讯地图的使用），导致调用接口失败了，然后才用的[百度地图web端的api](http://lbsyun.baidu.com/index.php?title=jspopular)，而且官方给了代码实例，我们稍作修改即可使用。
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/location.jpg" width="300" alt="定位"/>
 
 #### 天气
