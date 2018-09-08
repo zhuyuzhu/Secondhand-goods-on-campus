@@ -17,7 +17,7 @@
 
 
 #### 轮播图
-轮播图直接用微信小程序的组件，&lt;swiper&gt;设置轮播图属性——> &lt;block&gt;循环遍历每一项——> &lt;swiper-item&gt;轮播每一项——> &lt;image&gt;每一项的图片
+轮播图直接用微信小程序的组件，&lt;swiper&gt;设置轮播图属性——> &lt;block&gt;循环遍历每一项——> &lt;swiper-item&gt;轮播每一项——> &lt;image&gt;每一项的图片。[详情](https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html)
 
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper.jpg" width="300" alt="轮播效果图"/>
 下面是代码截图：
@@ -31,7 +31,7 @@
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/search-book.jpg" width="300" alt="搜索框图片"/>
 
 #### 滚动条
-我采用引入模板的方式，将这个功能写好后，引入到首页，同样用的&lt;swiper&gt;标签。[详情]()
+我采用引入模板的方式，将这个功能写好后，引入到首页，同样用的&lt;swiper&gt;标签。[详情](https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html)
 
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/swiper-y.jpg" width="300" alt="校园头条"/>
 下面是代码截图：
@@ -49,6 +49,7 @@
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/recommend.jpg" width="300" alt="今日推荐"/>
 
 ## 购物车
+购物车
 <img src="https://github.com/zhuyuzhu/images/blob/master/pictures/shoppingCart.jpg" width="300" alt="购物车"/>
 
 ## 发布
