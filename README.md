@@ -7,11 +7,11 @@
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/homePage.jpg" width="300" alt="首页"/>
 
 #### 定位
-定位功能调用的是百度的接口，本来是想腾讯地图的，但是自己在使用的过程中，出现了一些错误（后续会完善腾讯地图的使用），导致调用接口失败了，然后才用的[百度地图web端的api](http://lbsyun.baidu.com/index.php?title=jspopular)，而且官方给了代码实例，我们稍作修改即可使用。
+定位功能调用的是百度的接口，本来是想腾讯地图的，但是自己在使用的过程中，出现了一些错误（后续会完善腾讯地图的使用），导致调用接口失败了，然后才用的[百度地图web端的api](http://lbsyun.baidu.com/index.php?title=jspopular)，而且官方给了代码实例，我们稍作修改即可使用。 [定位详情](https://blog.csdn.net/zyz00000000/article/details/82531397)
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/location.jpg" width="300" alt="定位"/>
 
 #### 天气
-天气功能调用的是百度的接口，在百度地图官网给的代码实例里面除了位置功能，还有当地天气的数据，可以直接拿来使用。
+天气功能调用的是百度的接口，在百度地图官网给的代码实例里面除了位置功能，还有当地天气的数据，可以直接拿来使用。[天气详情](https://blog.csdn.net/zyz00000000/article/details/82531397)
 
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/weather.jpg" width="300" alt="天气"/>
 
