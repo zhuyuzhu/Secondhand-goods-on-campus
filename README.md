@@ -67,9 +67,10 @@
 
 ## 我的
 样式，每一项后面有的" > "是如何实现的呢？
+通过伪元素，transform: matrix()实现>的效果。
 
 <img src="https://github.com/zhuyuzhu/images/blob/master/pictures/1.png" width="300" alt="样式"/>
-<img src="https://github.com/zhuyuzhu/images/blob/master/pictures/2.jpg" width="300" alt="代码"/>
+<img src="https://github.com/zhuyuzhu/images/blob/master/pictures/2.jpg" width="600" alt="代码"/>
 
 <img src="https://github.com/zhuyuzhu/images/blob/master/pictures/my.jpg" width="300" alt="个人信息"/>
 
