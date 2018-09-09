@@ -41,6 +41,7 @@
 
 #### 四个分类功能
 分类功能实现的也比较简单，没有什么技术性的东西，或许wxss样式对你有所帮助。
+
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/classify.jpg" width="300" alt="四个分类"/>
 
 #### 今日推荐
@@ -49,16 +50,26 @@
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/recommend.jpg" width="300" alt="今日推荐"/>
 
 ## 购物车
-购物车
+购物车的实现也较为简单，将用户id和商品id传给后端，后端才能把对应的数据给前端。[详情]()
+
 <img src="https://github.com/zhuyuzhu/images/blob/master/pictures/shoppingCart.jpg" width="300" alt="购物车"/>
 
 ## 发布
+发布功能，注意一点，必填的内容都填了“发布”按钮才可以点击
+
+
 <img src="https://github.com/zhuyuzhu/images/blob/master/pictures/release.jpg" width="300" alt="发布功能"/>
 
 ## 订单
+订单功能，请求数据，展示数据，没什么难度
+
 <img src="https://github.com/zhuyuzhu/images/blob/master/pictures/order.jpg" width="300" alt="订单管理"/>
 
 ## 我的
+样式，每一项后面有的" > "是如何实现的呢？
+<img src="https://github.com/zhuyuzhu/images/blob/master/pictures/1.png" width="300" alt="样式"/>
+<img src="https://github.com/zhuyuzhu/images/blob/master/pictures/2.png" width="300" alt="代码"/>
+
 <img src="https://github.com/zhuyuzhu/images/blob/master/pictures/my.jpg" width="300" alt="个人信息"/>
 
 ## 身份验证
