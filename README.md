@@ -79,4 +79,8 @@
 #### 账号：20151621029 密码：666666
 <img src="https://github.com/zhuyuzhu/images/blob/master/pictures/identityVerify.jpg" width="300" alt="身份验证"/>
 
+### 校园兼职
+#### 用户可以通过小程序，发布兼职信息，发布的兼职信息会在“首页——校园兼职”中，可以在兼职列表中查看兼职的详情
 
+<img src="https://github.com/zhuyuzhu/images/blob/master/pictures/partTimeJob.jpg" width="300" alt="身份验证"/>
+<img src="https://github.com/zhuyuzhu/images/blob/master/pictures/partTimeJobDetail.jpg" width="300" alt="身份验证"/>
