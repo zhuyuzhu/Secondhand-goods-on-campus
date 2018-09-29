@@ -75,5 +75,7 @@
 <img src="https://github.com/zhuyuzhu/images/blob/master/pictures/my.jpg" width="300" alt="个人信息"/>
 
 ## 身份验证
+#### 因为需要学校的学生身份才可以使用小程序的功能，这里给出一个测试的账号和密码
+#### 账号：20151621029 密码：666666
 <img src="https://github.com/zhuyuzhu/images/blob/master/pictures/identityVerify.jpg" width="300" alt="身份验证"/>
 
