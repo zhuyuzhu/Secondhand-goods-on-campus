@@ -83,4 +83,12 @@
 #### 用户可以通过小程序，发布兼职信息，发布的兼职信息会在“首页——校园兼职”中，可以在兼职列表中查看兼职的详情
 
 <img src="https://github.com/zhuyuzhu/images/blob/master/pictures/partTimeJob.jpg" width="300" alt="身份验证"/>
+
+#### 当点击“家教老师”这则兼职的时候，会跳转到相应的详情页面
 <img src="https://github.com/zhuyuzhu/images/blob/master/pictures/parTimeJobDetail.jpg" width="300" alt="身份验证"/>
+
+### 商品详细
+<img src="https://github.com/zhuyuzhu/images/blob/master/pictures/goodsDetail.jpg" width="300" alt="身份验证"/>
+
+#### 预约购买
+<img src="https://github.com/zhuyuzhu/images/blob/master/pictures/buyGoods.jpg" width="300" alt="身份验证"/>
