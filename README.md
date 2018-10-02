@@ -50,7 +50,7 @@
 <img src="https://raw.githubusercontent.com/zhuyuzhu/images/master/pictures/recommend.jpg" width="300" alt="今日推荐"/>
 
 ## 购物车
-购物车的实现也较为简单，将用户id和商品id传给后端，后端才能把对应的数据给前端。[详情]()
+购物车的实现也较为简单，将用户id和商品id传给后端，后端才能把对应的数据给前端。[详情](https://blog.csdn.net/zyz00000000/article/details/82532998)
 
 <img src="https://github.com/zhuyuzhu/images/blob/master/pictures/shoppingCart.jpg" width="300" alt="购物车"/>
 
